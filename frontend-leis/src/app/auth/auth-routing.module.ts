@@ -14,8 +14,8 @@ const routesAuth: Routes = [
         path: '',
         component: MainComponent,
         children: [
-            { path: 'login', component: LoginComponent },
-            { path: 'register', component: RegisterComponent },
+            { path: 'login', component: LoginComponent, pathMatch: 'full' },
+            { path: 'register', component: RegisterComponent, pathMatch: 'full' },
             { path: '**', redirectTo: 'login' },
         ]
     }
