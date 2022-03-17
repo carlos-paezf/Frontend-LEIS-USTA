@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
     selector: 'app-main',
     templateUrl: './main.component.html',
-    styles: []
+    styleUrls: [ './main.component.css' ]
 })
 export class MainComponent {
-    constructor() { }
+    public items = [
+        {
+            label: 'Iniciar Sesión',
+            routerLink: '/auth/login'
+        },
+        {
+            label: 'Crear Cuenta',
+            routerLink: '/auth/register'
+        }
+    ]
 }
