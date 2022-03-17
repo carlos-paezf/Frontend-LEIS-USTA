@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -7,14 +7,5 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: [ './main.component.css' ]
 })
 export class MainComponent {
-    public items = [
-        {
-            label: 'Iniciar Sesión',
-            routerLink: '/auth/login'
-        },
-        {
-            label: 'Crear Cuenta',
-            routerLink: '/auth/register'
-        }
-    ]
+    
 }
