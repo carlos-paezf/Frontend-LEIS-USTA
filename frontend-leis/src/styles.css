@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --gold: rgb(199, 160, 2);
+    --royal-blue: rgb(8, 22, 54);
 }
 
 
@@ -62,10 +63,11 @@ body {
 
 .flex__input .input__show {
     align-items: center;
-    background: var(--text-color);
+    background: var(--royal-blue);
     display: flex;
     justify-content: center;
     width: 50px;
+    border-radius: 5px;
 }
 
 .flex__input .input__show i {

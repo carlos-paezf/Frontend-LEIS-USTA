@@ -19,4 +19,8 @@ export class ToastrNotificationService {
     public success = (message: string, title: string, params: any = this.params): void => {
         this._toastr.success(message, title, params)
     }
+
+    public error = (message: string, title: string, params: any = this.params): void => {
+        this._toastr.error(message, title, params)
+    }
 }
