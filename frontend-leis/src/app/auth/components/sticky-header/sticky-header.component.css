@@ -1,0 +1,53 @@
+.menu__auth,
+.menu__links,
+.menu__img {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu__auth {
+    background: linear-gradient(rgb(10, 30, 78), rgb(8, 22, 56));
+    background: var(--royal-blue);
+    border-bottom: 3px solid var(--gold);
+    height: 70px;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    top: 0;
+    transition: all .3s;
+    width: 100vw;
+}
+
+
+.menu__sticky {
+    height: 60px;
+    transition: all .3s;
+}
+
+
+.menu__img {
+    margin: 0 50px;
+}
+
+.menu__img,
+.menu__links {
+    height: 100%;
+    width: 50%;
+}
+
+.menu__links {
+    justify-content: end;
+}
+
+.menu__links a {
+    color: white;
+    font-size: 17.5px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.menu__links a:hover {
+    color: var(--gold);
+    transition: all 0.3s;
+}
