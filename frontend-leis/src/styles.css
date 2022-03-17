@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --gold: rgb(199, 160, 2);
+}
+
+
+html, 
+body {
+    margin: 10px;
+    background-color: var(--surface-a);
+    font-family: var(--font-family);
+}
+
+
+.text-layout {
+    color: var(--text-color)
+}
+
+
+/* --------------- Alineación del contenido --------------- */
+.align-row-left,
+.align-row-center,
+.align-row-right,
+.form__auth {
+    display: flex;
+    justify-content: center;
+}
+
+
+.align-row-left,
+.align-row-center,
+.align-row-right {
+    flex-direction: row;
+}
+
+
+.align-row-left { align-items: left; }
+.align-row-center { align-items: center; }
+.align-row-right { align-items: right; }
+
+
+
+/* --------------- Estilos de los formularios de autenticación --------------- */
+.form__auth {
+    align-items: center;
+    height: 100vh;
+}
+
+
+.form__content {
+    margin: 0 400px;
+    width: 100%;
+}
+
+
+.flex__input,
+.flex__label-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.flex__input .input__show {
+    align-items: center;
+    background: var(--text-color);
+    display: flex;
+    justify-content: center;
+    width: 50px;
+}
+
+.flex__input .input__show i {
+    color: white;
+    font-size: 22.5px;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.form__btn {
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+}
