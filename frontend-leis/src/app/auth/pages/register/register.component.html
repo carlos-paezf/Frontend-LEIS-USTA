@@ -1,1 +1,142 @@
-<p>register works!</p>
+<!-- <div class="container fluid"> -->
+<div class="mt-5 container-fluid">
+    <div class="form__auth">
+        <div class="form__content">
+            <div class="mb-4 align-row-center">
+                <h1>Regístrate</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="row">
+                        <small class="text-danger">* Indica Campos Obligatorios</small>
+                    </div>
+
+                    <!-- Asociar el formulario de HTML con el contenido de la clase del componente -->
+                    <form method="post" [formGroup]="registerForm" autocomplete="off">
+
+                        <!-- Nombres y Apellidos -->
+                        <div class="mb-1 row">
+                            <!-- Input Text de Nombres -->
+                            <div class="col-md-6">
+                                <div class="my-3">
+                                    <label class="col-form-control">
+                                        Nombre(s) <small class="text-danger">*</small>
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" formControlName="name"
+                                    placeholder="Ingresa tu(s) nombre(s)">
+                                <span class="form-text text-danger" *ngIf="isInvalidField('name')">
+                                    El campo es obligatorio
+                                </span>
+                            </div>
+                            <!-- Input Text de Apellidos -->
+                            <div class="col-md-6">
+                                <div class="my-3">
+                                    <label class="col-form-control">
+                                        Apellido(s) <small class="text-danger">*</small>
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" formControlName="surname"
+                                    placeholder="Ingresa tu(s) apellido(s)">
+                                <span class="form-text text-danger" *ngIf="isInvalidField('surname')">
+                                    El campo es obligatorio
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Input Text de Email -->
+                        <div class="mb-1 row">
+                            <div class="col">
+                                <div class="my-3">
+                                    <label class="col-form-control">
+                                        Email <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" formControlName="email"
+                                    placeholder="Ingresa tu Email">
+                                <span class="form-text text-danger" *ngIf="isInvalidField('email')">
+                                    {{ emailError }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Input Text de Password -->
+                        <div class="mb-1 row">
+                            <div class="col">
+                                <div class="my-3 flex__label-input">
+                                    <label class="col-form-control">
+                                        Contraseña <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+
+                                <div class="flex__input">
+                                    <input [type]="showPassword ? 'text' : 'password'" class="form-control"
+                                        formControlName="password" placeholder="Ingresa tu Contraseña">
+                                    <button type="button" class="input__show" (click)="togglePassword('password')">
+                                        <i [class]="showPassword ? 'pi pi-eye-slash': 'pi pi-eye'"></i>
+                                    </button>
+                                </div>
+                                <span class="form-text text-danger" *ngIf="isInvalidField('password')">
+                                    Se debe ingresar una contraseña
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Input Text de Confirm Password -->
+                        <div class="mb-1 row">
+                            <div class="col">
+                                <div class="my-3 flex__label-input">
+                                    <label class="col-form-control">
+                                        Confirma tu contraseña <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+
+                                <div class="flex__input">
+                                    <input [type]="showConfirmPassword ? 'text' : 'password'" class="form-control"
+                                        formControlName="confirm_password" placeholder="Ingresa tu Contraseña de nuevo">
+                                    <button type="button" class="input__show"
+                                        (click)="togglePassword('confirm_password')">
+                                        <i [class]="showConfirmPassword ? 'pi pi-eye-slash': 'pi pi-eye'"></i>
+                                    </button>
+                                </div>
+                                <span class="form-text text-danger" *ngIf="isInvalidField('confirm_password')">
+                                    Las contraseñas deben coincidir
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Inicio de Sesión -->
+                        <div class="row mt-4">
+                            <!-- Registro de nueva cuenta -->
+                            <div class="col-sm-12 mb-3">
+                                <button type="submit" (click)="register()" class="btn btn-primary form__btn">
+                                    Regístrate
+                                </button>
+                            </div>
+
+                            <!-- Registro con Google -->
+                            <div class="col-sm-12">
+                                <button class="btn btn-dark form__btn">
+                                    <i class="pi pi-google mx-2"></i>
+                                    O inicia sesión con Google
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Redirecciona a la vista de registro -->
+                        <div class="row mt-4">
+                            <div class="col-sm-12 align-row-center">
+                                <label>¿Ya tienes una cuenta?</label>
+                                <a [routerLink]="['/auth/login']" routerLinkActive="router-link-active">
+                                    <label class="mx-2">Inicia sesión aquí</label>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="menu__auth" [ngClass]="enableSticky ? 'menu__sticky' : ''" >
+    <div class="menu__img">
+        <img src="../../../../assets/logo_santoto_tunja_2022.png" alt="USTA" height="90%">
+    </div>
+    <div class="menu__links">
+        <a *ngFor="let item of items" [routerLink]="[item.routerLink]" routerLinkActive="router-link-active">
+            {{ item.label }}
+        </a>
+    </div>
+</div>
