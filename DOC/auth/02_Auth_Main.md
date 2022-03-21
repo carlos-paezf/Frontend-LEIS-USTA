@@ -9,8 +9,33 @@ La clase del componente no va a tener nada, y tampoco sus hoja de estilos. Lo im
 El template (HTML) del componente es simple, un menú en la parte superior, y el marcador de posición para el módulo:
 
 ```html
-<app-sticky-header></app-sticky-header>
+<div class="app__auth">
+    <app-sticky-header></app-sticky-header>
+    
+    <div class="content__auth">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+```
 
-<!-- Directiva de Enrutamiento  -->
-<router-outlet></router-outlet>
+## Estilo del componente
+
+```css
+.app__auth {
+	background: #fff;
+	box-shadow: rgba(#000, 0.1) 0 7px 29px 0;
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 100%;
+	min-width: var(--sidenav-width);
+	width: 100vw;
+	height: 100vh;
+	justify-content: space-between;
+}
+
+
+.content__auth {
+	flex: 1;
+    margin-top: var(--sticky-height);
+}
 ```

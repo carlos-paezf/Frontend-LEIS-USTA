@@ -1,21 +1,22 @@
-<div class="container fluid">
-    <div class="form__auth">
-        <div class="form__content">
+<!-- <div class="container fluid"> -->
+<div class="form__auth">
+    <div class="form__login">
+        <div class="form__content animate__animated animate__fadeIn">
             <div class="mb-4 align-row-center">
                 <h1>Inicio de Sesión</h1>
             </div>
-        
-        
+
+
             <div class="row">
                 <div class="col-md-12">
-                    
+
                     <div class="row">
                         <small class="text-danger">* Indica Campos Obligatorios</small>
                     </div>
 
                     <!-- Asociar el formulario de HTML con el contenido de la clase del componente -->
                     <form method="post" [formGroup]="loginForm" autocomplete="off">
-        
+
                         <!-- Input Text de Email -->
                         <div class="mb-3 row">
                             <div class="col">
@@ -24,13 +25,14 @@
                                         Email <span class="text-danger">*</span>
                                     </label>
                                 </div>
-                                <input type="text" class="form-control" formControlName="email" placeholder="Ingresa tu Email">
+                                <input type="text" class="form-control" formControlName="email"
+                                    placeholder="Ingresa tu Email">
                                 <span class="form-text text-danger" *ngIf="isInvalidField('email')">
                                     {{ emailError }}
                                 </span>
                             </div>
                         </div>
-        
+
                         <!-- Input Text de Password -->
                         <div class="mb-3 row">
                             <div class="col">
@@ -42,7 +44,7 @@
                                         ¿Olvidaste tu contraseña?
                                     </label>
                                 </div>
-                                
+
                                 <div class="flex__input">
                                     <input [type]="showPassword ? 'text' : 'password'" class="form-control"
                                         formControlName="password" placeholder="Ingresa tu Contraseña">
@@ -55,25 +57,25 @@
                                 </span>
                             </div>
                         </div>
-        
+
                         <!-- Botones de Inicio de Sesión -->
                         <div class="row mt-4">
                             <!-- Inicio de Sesión con Email y Password -->
                             <div class="col-sm-12 mb-3">
-                                <button type="submit" (click)="login()" class="btn btn-primary form__btn">
+                                <button type="submit" (click)="login()" class="btn btn__auth form__btn">
                                     Iniciar Sesión
                                 </button>
                             </div>
-        
+
                             <!-- Inicio de Sesión con Google -->
                             <div class="col-sm-12">
-                                <button class="btn btn-dark form__btn">
+                                <button class="btn btn__google form__btn">
                                     <i class="pi pi-google mx-2"></i>
-                                    O inicia sesión con Google
+                                    Ingresa con Google
                                 </button>
                             </div>
                         </div>
-        
+
                         <!-- Redirecciona a la vista de registro -->
                         <div class="row mt-4">
                             <div class="col-sm-12 align-row-center">
@@ -89,3 +91,4 @@
         </div>
     </div>
 </div>
+<!-- </div> -->

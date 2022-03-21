@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.1.0",
+    "animate.css": "^4.1.1",
     "ngx-toastr": "^14.2.2",
     "primeicons": "^5.0.0",
     "primeng": "^13.2.1",

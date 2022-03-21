@@ -55,12 +55,15 @@ export class StickyHeaderComponent implements OnInit {
 Como se menciono anteriormente, dentro de los estilos hay una clase que se va a añadir de manera condicional al menú. Para ello usamos la directiva `[ngClass]` y dentro el operador ternario:
 
 ```html
-<div class="menu__auth" [ngClass]="enableSticky ? 'menu__sticky' : ''" >
-    <div class="menu__img">
-        <img src="../../../../assets/logo_santoto_tunja_2022.png" alt="USTA" height="90%">
+<div class="sticky__nav" [ngClass]="enableSticky ? 'sticky': ''">
+    <div class="auth__img">
+        <img src="../../../../assets/logo_santoto_tunja_2022.png" alt="USTA">
     </div>
-    <div class="menu__links">
-        <a *ngFor="let item of items" [routerLink]="[item.routerLink]" routerLinkActive="router-link-active">
+
+    <div class="auth__links">
+        <a *ngFor="let item of items" [routerLink]="item.routerLink" routerLinkActive="router-link-active"
+            [routerLinkActiveOptions]="{ exact: true }" #rla="routerLinkActive"
+            [class]="!rla ? 'router-link-active' : ''">
             {{ item.label }}
         </a>
     </div>
@@ -70,57 +73,49 @@ Como se menciono anteriormente, dentro de los estilos hay una clase que se va a 
 ### CSS del componente
 
 ```css
-.menu__auth,
-.menu__links,
-.menu__img {
+.sticky__nav {
     align-items: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.menu__auth {
     background: linear-gradient(rgb(10, 30, 78), rgb(8, 22, 56));
-    background: rgb(8, 22, 54);
-    border-bottom: 3px solid var(--gold);
-    height: 70px;
-    justify-content: space-between;
-    padding: 0 100px;
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 1 auto;
+    height: var(--sticky-height);
+    padding-inline: calc(var(--sticky-height) * 0.9);
     position: fixed;
-    top: 0;
-    transition: all .3s;
+    transition: all var(--duration);
     width: 100vw;
+    z-index: 10;
+}
+.sticky__nav.sticky {
+    height: var(--sticky-height-mini);
 }
 
 
-.menu__sticky {
-    height: 60px;
-    transition: all .3s;
-}
-
-
-.menu__img {
-    margin: 0 50px;
-}
-
-.menu__img,
-.menu__links {
+.auth__img {
+    flex: 1;
     height: 100%;
-    width: 50%;
+    padding: 10px;
+}
+.auth__img img {
+    height: 100%;
 }
 
-.menu__links {
-    justify-content: end;
-}
 
-.menu__links a {
-    color: white;
+.auth__links {
+    align-items: center;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: calc(100vw * 0.2);
+}
+.auth__links a {
+    color: var(--text-light);
     font-size: 17.5px;
-    margin: 0 20px;
-    text-decoration: none;
 }
-
-.menu__links a:hover {
+.auth__links a.router-link-active,
+.auth__links a:hover {
     color: var(--gold);
-    transition: all 0.3s;
+    transition: all var(--duration);
 }
 ```

@@ -310,55 +310,69 @@ export class LoginComponent implements OnInit {
 Definimos algunos estilos CSS dentro del archivo `src/styles.css`, con el fin de poder acceder a ellos en toda la aplicación:
 
 ```css
-/* You can add global styles to this file, and also import other style files */
 :root {
     --gold: rgb(199, 160, 2);
+    --royal-blue: rgb(8, 22, 54);
+
+    --primary: rgb(8, 22, 54);
+    --primary-lighter: rgb(16, 36, 82);
+    --primary-light: rgb(26, 48, 97);
+
+    --secondary: rgb(200, 0, 0);
+
+    --orange: rgb(209, 98, 18);
+    
+    --text-light: #8895b5;
+    --text-on-primary: #fff;
+
+    --duration: 250ms;
+    --timing: ease-out;
+
+    --icon-size: 1.25rem;
+    --icon-width: 2.5rem;
+
+    --radius-sm: .5rem;
+    --radius: 1rem;
+
+    --sidenav-gutter: 1.5rem;
+    --sidenav-width: 23.5rem;
+
+    --sticky-height: 5rem;
+    --sticky-height-mini: 4rem;
 }
 
 
-html, 
-body {
-    margin: 10px;
-    background-color: var(--surface-a);
-    font-family: var(--font-family);
-}
 
+/*! Estilos de los formularios de autenticación ---------------------------------- */
 
-.text-layout {
-    color: var(--text-color)
-}
-
-
-/* --------------- Alineación del contenido --------------- */
-.align-row-left,
-.align-row-center,
-.align-row-right,
 .form__auth {
     display: flex;
-    justify-content: center;
-}
-
-
-.align-row-left,
-.align-row-center,
-.align-row-right {
-    flex-direction: row;
-}
-
-
-.align-row-left { align-items: left; }
-.align-row-center { align-items: center; }
-.align-row-right { align-items: right; }
-
-
-
-/* --------------- Estilos de los formularios de autenticación --------------- */
-.form__auth {
     align-items: center;
-    height: 100vh;
+    flex: 1 1 auto;
+    justify-content: center;
+    height: 100%;
 }
 
 
+/*! Formulario de login y register ----------------------------------------------- */
+
+.form__login {
+    width: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.form__register {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*! Contenido de los formularios ------------------------------------------------- */
 .form__content {
     margin: 0 400px;
     width: 100%;
@@ -374,10 +388,11 @@ body {
 
 .flex__input .input__show {
     align-items: center;
-    background: var(--text-color);
+    background: var(--royal-blue);
     display: flex;
     justify-content: center;
     width: 50px;
+    border-radius: 5px;
 }
 
 .flex__input .input__show i {
@@ -395,6 +410,30 @@ body {
     height: 50px;
     width: 100%;
     font-size: 20px;
+}
+
+
+/*! Botones de ingreso o registro-----------------------------------------------  */
+
+.btn__auth {
+    background-color: var(--primary);
+    color: var(--text-on-primary);
+    transition: all var(--duration);
+}
+
+
+.btn__google {
+    background: var(--secondary);
+    color: var(--text-on-primary);
+    transition: all var(--duration);
+}
+
+
+.btn__auth:hover,
+.btn__google:hover {
+    color: var(--text-on-primary);
+    transition: all var(--duration);
+    transform: scale(1.01);
 }
 ```
 

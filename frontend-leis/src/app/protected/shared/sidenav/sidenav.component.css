@@ -1,0 +1,526 @@
+/*! Contenedor del Sidenav ----------------------------------- */
+
+.sidenav {
+    background: var(--royal-blue);
+    border-right: 2px solid var(--gold);
+    color: var(--text-on-primary);
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 auto;
+    height: 100vh;
+    max-width: 100%;
+    padding: var(--sidenav-gutter);
+    transition: width var(--duration) var(--timing);
+    width: var(--sidenav-width);
+}
+.sidenav.is-collapsed {
+    width: 5.5rem;
+}
+
+
+/*! Header --------------------------------------------------  */
+
+.sidenav__header {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+
+.header .sidenav__button-icon {
+    width: auto;
+}
+
+
+/*! Contenedor del logo de la USTA --------------------------- */
+
+.header__logo {
+    display: inline-flex;
+    justify-content: left;
+    margin: 0;
+    width: 100%;
+}
+.sidenav.is-collapsed .header__logo {
+    justify-content: center;
+}
+
+
+/*! Logo de la USTA ------------------------------------------ */
+
+.header__logo img {
+    width: 85%;
+    /* clip-path: inset(30px 5px 25px 10px); */
+    margin: 1rem 0;
+    transition: width var(--duration);
+}
+.sidenav.is-collapsed .header__logo img {
+    clip-path: none;
+    margin: 0;
+    width: 4rem;
+}
+
+
+/*! Icono de Header ------------------------------------------ */
+
+.header__icon {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: var(--icon-width);
+    justify-content: center;
+    width: var(--icon-width);
+}
+.header__icon i {
+    font-size: var(--icon-size);
+}
+
+
+/*! Texto del Header ------------------------------------------ */
+
+.header__text {
+    display: inline-block;
+    flex: 1;
+    font-weight: 700;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    transition-delay: var(--duration);
+    transition-duration: var(--duration);
+    transition-property: opacity, transform;
+    transition-timing-function: var(--timing);
+    white-space: nowrap;
+}
+.sidenav.is-collapsed .header__text {
+    opacity: 0;
+    transform: translateX(1rem);
+    transition-delay: 0s;
+}
+
+
+/*! Toggle del la propiedad collapsed ------------------------ */
+
+.sidenav__button {
+    align-items: center;
+    background: var(--primary-lighter);
+    border-radius: var(--radius-sm);
+    border: 0;
+    color: var(--text-light);
+    cursor: pointer;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    flex: 0 0 auto;
+    left: 100%;
+    outline-offset: -2px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    transition-duration: var(--duration);
+    transition: background, color;
+}
+.sidenav__button:active {
+    color: var(--text-on-primary);
+}
+.sidenav__button:focus-visible {
+    outline: 2px solid var(--primary-lighter);
+}
+.sidenav__button:focus-visible,
+.sidenav__button:hover {
+    background: var(--primary-lighter);
+    color: var(--text-on-primary)
+}
+.sidenav.is-collapsed .sidenav__button {
+    transform: translateX(0.8rem);
+}
+
+
+/*! Icono del toggle ----------------------------------------- */
+
+.sidenav__button-icon {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: var(--icon-width);
+    justify-content: center;
+    width: var(--icon-width);
+}
+.sidenav__button-icon i {
+    aspect-ratio: 1;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition-duration: .5s;
+    transition-property: transform, color;
+}
+.sidenav__button-icon i:hover {
+    color: var(--text-on-primary)
+}
+.sidenav.is-collapsed .sidenav__button-icon i {
+    transform: rotate(180deg);
+}
+
+
+/*! Sección de Búsqueda -------------------------------------- */
+
+.search {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1rem 0;
+    position: relative;
+}
+
+
+/*! Icono de Búsqueda ---------------------------------------- */
+
+.search__icon {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: var(--icon-width);
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--icon-width);
+}
+.search__icon i {
+    font-size: var(--icon-size);
+}
+
+
+/*! Input de la búsqueda ------------------------------------- */
+
+.search__input {
+    background: var(--primary-lighter);
+    border-radius: var(--radius-sm);
+    border: none;
+    color: var(--text-on-primary);
+    flex: 1 1 auto;
+    height: var(--icon-width);
+    min-width: 1px;
+    outline-offset: -2px;
+    padding: 0 var(--icon-width) 0 1rem;
+    transition-duration: var(--duration);
+    transition-property: background, color, padding;
+}
+.search__input::placeholder {
+    color: var(--text-light);
+    transition-duration: var(--duration);
+    transition-property: color;
+}
+.search__input:focus {
+    outline: 2px solid var(--gold); 
+}
+.sidenav.is-collapsed .search__input {
+    color: transparent;
+    padding-left: 0;
+}
+.sidenav.is-collapsed .search__input:not(:hover) {
+    background: none;
+}
+.sidenav.is-collapsed .search__input::placeholder {
+    color: transparent
+}
+
+
+/*! Navegación ------------------------------------------------ */
+
+.sidenav__nav {
+    --offset: var(--sidenav-gutter) - .125rem;
+    flex: 1 1 auto;
+    margin: 1rem (var(--offset) * -1) 0;
+    padding: 0 var(--offset);
+}
+.sidenav.is-collapsed .sidenav__nav {
+    width: 3.85rem;
+}
+
+
+/*! Contenedor de la navegación ------------------------------- */
+
+.nav {
+	--scroll-thumb: var(--text-light);
+	--scroll-track: var(--primary-lighter);
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-color: var(--scroll-thumb) transparent;
+    scrollbar-width: thin;
+	transition: scrollbar-color 200ms;
+}
+.nav::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+.nav::-webkit-scrollbar-track {
+    background: transparent;
+    transition: background 200ms;
+    border-radius: var(--radius);
+}
+.nav::-webkit-scrollbar-thumb {
+    background: var(--text-light); 
+    border-radius: var(--radius);
+}
+.nav::-webkit-scrollbar-corner {
+    background: none;
+}
+.nav:hover {
+	--scroll-thumb: var(--text-light);
+    --scroll-track: var(--primary-lighter);
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+.nav:hover::-webkit-scrollbar-track {
+    background: var(--primary-lighter);
+}
+.nav:not(:hover)::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+/*! Lista de Items ------------------------------------------- */
+
+.nav__list {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    margin: 10px 0;
+    min-width: var(--icon-width);
+    padding: 0;
+}
+.nav__list.list__child {
+    margin: 0 35px;
+    transition: all var(--duration);
+}
+.nav__list.list__child.select,
+.sidenav.is-collapsed .nav__list.list__child {
+    opacity: 0;
+    height: 0;
+    transition: all var(--duration);
+}
+
+
+/*! Separador ------------------------------------------------ */
+
+.nav__divider {
+    margin: 1rem 0;
+    width: 100%;
+    min-width: var(--icon-width);
+    padding: 0 (var(--icon-width) - var(--icon-size)) / 2;
+}
+.nav__divider::before {
+    background: var(--primary-lighter);
+    content: '';
+    display: block;
+    height: 1px;
+}
+
+
+/*! Item del menú -------------------------------------------- */
+
+.nav__item {
+    margin-top: .25rem;
+    position: relative;
+}
+.nav__button.is-active {
+    color: var(--gold);
+}
+
+/*! Botones de navegación ------------------------------------ */
+
+.nav__button {
+    align-items: center;
+    background: none;
+    border-radius: var(--radius-sm);
+    border: 0;
+    color: var(--text-light);
+    cursor: pointer;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    max-width: 100%;
+    outline-offset: -2px;
+    overflow: hidden;
+    padding: 0;
+    transition-duration: var(--duration);
+    transition-property: background, color;
+    width: 100%;
+}
+.nav__button.is-active {
+    color: var(--gold);
+}
+.nav__button:focus-visible {
+    outline: 2px solid var(--primary-lighter);
+}
+.nav__button:focus-visible,
+.nav__button:hover {
+    background: var(--primary-light);
+    color: var(--text-on-primary);
+}
+.sidenav.is-collapsed .nav__button {
+    width: var(--icon-width);
+}
+
+
+/*! Iconos de los items de navegación ------------------------ */
+
+.nav__icon {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: var(--icon-width);
+    justify-content: center;
+    width: var(--icon-width);
+}
+.nav__icon i {
+    aspect-ratio: 1;
+    font-size: var(--icon-size);
+}
+
+
+/*! Texto de los items --------------------------------------- */
+
+.nav__label {
+    display: inline-block;
+    flex: 1;
+    margin-right: 2.35rem;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    transition-delay: 100ms;
+    transition-duration: var(--duration);
+    transition-property: opacity, transform;
+    transition-timing-function: var(--timing);
+    white-space: nowrap;
+}
+.sidenav.is-collapsed .nav__label {
+    opacity: 0;
+    transform: translateX(1rem);
+    transition-delay: 0s;
+}
+
+
+/*! Botón para desplegar items hijos ------------------------- */
+
+.nav__item-children {
+    align-items: center;
+    background: transparent;
+    border-radius: var(--border);
+    border: none;
+    color: var(--text-light);
+    display: flex;
+    height: var(--icon-width);
+    justify-content: center;
+    transition-duration: var(--duration);
+    transition-property: background, transform;
+    transition-timing-function: var(--timing);
+    width: var(--icon-width);
+    z-index: 10;
+}
+.nav__item-children:hover {
+    color: var(--text-on-primary);
+}
+
+/*! Icono de despliegue -------------------------------------- */
+
+.nav__item-children i {
+    font-size: var(--icon-size);
+    transition: all var(--duration);
+}
+.nav__item-children.select i {
+    transform: rotate(180deg)
+}
+
+
+/*! Footer del menú ------------------------------------------ */
+
+.sidenav__footer {
+    margin-top: 1rem;
+}
+
+
+/*! Botón del usuario ---------------------------------------- */
+
+.user__button {
+    align-items: center;
+    background: none;
+    border-radius: 50vh;
+    border: 0;
+    color: var(--text-on-primary);
+    cursor: pointer;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    max-width: 100%;
+    outline-offset: -2px;
+    overflow: hidden;
+    padding: 0;
+    transition-duration: var(--duration);
+    transition-property: background, color;
+    width: 100%;
+}
+.user__button:active {
+    color: var(--text-on-primary);
+}
+.user__button:focus-visible {
+    outline: 2px solid --primary-lighter;
+}
+.user__button:focus-visible,
+.user__button:hover {
+    background-color: var(--primary-light);
+    color: var(--text-on-primary);
+}
+
+
+/*! Badge del botón del usuario ------------------------------ */
+
+.user__badge {
+    flex: 0 0 auto;
+    height: var(--icon-width);
+    padding: 2px;
+    width: var(--icon-width);
+}
+
+
+/*! Imagen del usuario --------------------------------------- */
+
+.user__image {
+    align-items: center;
+    background: #CFD8DC;
+    border-radius: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+.user__image i {
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+/*! Texto del usuario ---------------------------------------- */
+
+.user__text {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    margin-left: .5rem;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    transition-delay: 100ms;
+    transition-duration: var(--duration);
+    transition-property: opacity, transform;
+    transition-timing-function: var(--timing);
+    white-space: nowrap;
+}
+.sidenav.is-collapsed .user__text {
+    opacity: 0;
+    transform: translateX(1rem);
+    transition-delay: 0s;
+}
+
+
+/*! Titulo del usuario --------------------------------------- */
+
+.user__title {
+    font-size: .75rem;
+    color: var(--text-light);
+}
