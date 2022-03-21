@@ -1,0 +1,86 @@
+<div class="sidenav" id="sidenav">
+    <header class="sidenav__header header">
+        <!-- <span class="header__icon">
+            <i class="pi pi-eye"></i>
+        </span>
+        <span class="header__text">LEIS</span> -->
+        <div class="header__logo">
+            <!-- <img src="../../../../assets/USTA.png" alt="usta"> -->
+            <img [src]="isCollapsed ? '../../../../assets/escudo.png' : '../../../../assets/logo_santoto_tunja_2022.png'"
+                alt="usta">
+        </div>
+        <button class="sidenav__button" aria-label="Expand" (click)="toggle()">
+            <span class="sidenav__button-icon">
+                <i class="pi pi-chevron-left" arial-hidden="true"></i>
+            </span>
+        </button>
+    </header>
+
+
+    <section class="search">
+        <label for="search" class="search__icon">
+            <i class="pi pi-search" arial-hidden="true"></i>
+        </label>
+        <input type="text" class="search__input" id="search" placeholder="Search" (focus)="expand()">
+    </section>
+
+
+    <nav class="sidenav__nav nav">
+        <ul class="nav__list">
+            <li class="nav__item" *ngFor="let item of items; let i = index">
+                <button [routerLink]="item.routerLink" routerLinkActive="is-active" #rla="routerLinkActive"
+                    [class]="!rla ? 'nav__button is-active' : 'nav__button'" (click)="selectToggle(i)">
+                    <span class="nav__icon">
+                        <i [class]="item.icon" arial-hidden="true"></i>
+                    </span>
+                    <span class="nav__label">{{ item.label }}</span>
+                    <button class="nav__item-children" [id]="'list-button-'+i" *ngIf="item.routes">
+                        <i class="pi pi-chevron-down" arial-hidden="true"></i>
+                    </button>
+                </button>
+                <ul class="nav__list list__child select" *ngIf="item.routes" [id]="'list-child-'+i">
+                    <li class="nav__item" *ngFor="let item_child of item.routes; let i = index">
+                        <button [routerLink]="item_child.routerLink" routerLinkActive="is-active"
+                            #rla="routerLinkActive" [class]="!rla ? 'nav__button is-active' : 'nav__button'">
+                            <span class="nav__icon">
+                                <i [class]="item_child.icon" arial-hidden="true"></i>
+                            </span>
+                            <span class="nav__label">{{ item_child.label }}</span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <div class="nav__divider"></div>
+
+
+        <ul class="nav__list">
+            <li class="nav__item">
+                <button class="nav__button">
+                    <span class="nav__icon">
+                        <i class="pi pi-sliders-h" aria-hidden="true"></i>
+                    </span>
+                    <span class="nav__label">Settings</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="sidenav__footer user">
+        <button class="user__button">
+            <div class="user__badge">
+                <div class="user__image">
+                    <i class="pi pi-user" arial-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="user__text">
+                <span class="user__name">Carlos Páez</span>
+                <span class="user__title">Desarrollador</span>
+            </div>
+        </button>
+    </div>
+</div>

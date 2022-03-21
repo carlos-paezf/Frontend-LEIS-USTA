@@ -1,15 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
     --gold: rgb(199, 160, 2);
     --royal-blue: rgb(8, 22, 54);
+
+    --primary: rgb(8, 22, 54);
+    --primary-lighter: rgb(16, 36, 82);
+    --primary-light: rgb(26, 48, 97);
+
+    --secondary: rgb(200, 0, 0);
+
+    --orange: rgb(209, 98, 18);
+    
+    --text-light: #8895b5;
+    --text-on-primary: #fff;
+
+    --duration: 250ms;
+    --timing: ease-out;
+
+    --icon-size: 1.25rem;
+    --icon-width: 2.5rem;
+
+    --radius-sm: .5rem;
+    --radius: 1rem;
+
+    --sidenav-gutter: 1.5rem;
+    --sidenav-width: 23.5rem;
+
+    --sticky-height: 5rem;
+    --sticky-height-mini: 4rem;
 }
 
 
-html, 
+
+/*! Remover todas las animaciones y transiciones que la gente no prefiere ver -- */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/*! Reset ---------------------------------------------------------------------- */
+
+/*! Reglas de Box sizing ------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+/*! Remover margin por defecto ------------------------------------------------- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+
+/*! Estilos bases de la página -------------------------------------------------- */
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-    margin: 10px;
+    --scroll-thumb: var(--primary-lighter);
+	--scroll-track: var(--text-light);
+	align-items: center;
+	background: #cad5e8;
+	color: #212121;
+	flex-flow: column nowrap;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	scrollbar-color: var(--scroll-thumb) transparent;
+	transition: scrollbar-color 200ms;
     background-color: var(--surface-a);
-    font-family: var(--font-family);
+    display: flex;
+    font-family: var(--font-family);  
+    scrollbar-width: thin;
+    width: 100vw;
+}
+
+body::-webkit-scrollbar {
+	height: 12px;
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: var(--radius);
+    transition: background 200ms;
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--primary); 
+}
+body::-webkit-scrollbar-corner {
+    background: none;
+}
+body:hover {
+	--scroll-thumb: var(--primary-lighter);
+    --scroll-track: var(--text-light);
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+body:hover::-webkit-scrollbar-track {
+    background: var(--text-light);
+}
+
+
+a {
+    text-decoration: none;
 }
 
 
@@ -18,11 +129,12 @@ body {
 }
 
 
-/* --------------- Alineación del contenido --------------- */
+
+/*! Alineación del contenido ----------------------------------------------------- */
+
 .align-row-left,
 .align-row-center,
-.align-row-right,
-.form__auth {
+.align-row-right {
     display: flex;
     justify-content: center;
 }
@@ -41,13 +153,39 @@ body {
 
 
 
-/* --------------- Estilos de los formularios de autenticación --------------- */
+/*! Estilos de los formularios de autenticación ---------------------------------- */
+
 .form__auth {
+    display: flex;
     align-items: center;
-    height: 100vh;
+    flex: 1 1 auto;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: var(--sticky-height)
 }
 
 
+
+/*! Formulario de login y register ----------------------------------------------- */
+
+.form__login {
+    width: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.form__register {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*! Contenido de los formularios ------------------------------------------------- */
 .form__content {
     margin: 0 400px;
     width: 100%;
@@ -85,4 +223,29 @@ body {
     height: 50px;
     width: 100%;
     font-size: 20px;
+}
+
+
+
+/*! Botones de ingreso o registro-----------------------------------------------  */
+
+.btn__auth {
+    background-color: var(--primary);
+    color: var(--text-on-primary);
+    transition: all var(--duration);
+}
+
+
+.btn__google {
+    background: var(--secondary);
+    color: var(--text-on-primary);
+    transition: all var(--duration);
+}
+
+
+.btn__auth:hover,
+.btn__google:hover {
+    color: var(--text-on-primary);
+    transition: all var(--duration);
+    transform: scale(1.01);
 }
