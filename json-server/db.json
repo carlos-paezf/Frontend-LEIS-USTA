@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "user": "Carlos David Páez",
+            "email": "carlos.paezf@usantoto.edu.co",
+            "password": "password"
+        }
+    ],
+    "views": [
+        {
+            "id": 1,
+            "name": "Dashboard",
+            "path": "/dashboard"
+        },
+        {
+            "id": 2,
+            "name": "Equipos",
+            "path": "/equipment"
+        },
+        {
+            "id": 3,
+            "name": "Préstamos",
+            "path": "/loan"
+        },
+        {
+            "id": 4,
+            "name": "Laboratorios",
+            "path": "/laboratory"
+        },
+        {
+            "id": 5,
+            "name": "Herramientas y Experimentos",
+            "path": "/tool-experiment"
+        },
+        {
+            "id": 6,
+            "name": "Estadísticas",
+            "path": "/statistics"
+        },
+        {
+            "id": 7,
+            "name": "Reportes",
+            "path": "/report"
+        },
+        {
+            "id": 6,
+            "name": "Usuarios",
+            "path": "/users"
+        }
+    ]
+}
