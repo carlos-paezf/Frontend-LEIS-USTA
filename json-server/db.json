@@ -10,43 +10,43 @@
     "views": [
         {
             "id": 1,
-            "name": "Dashboard",
-            "path": "/dashboard"
+            "label": "Dashboard",
+            "routerLink": "/dashboard"
         },
         {
             "id": 2,
-            "name": "Equipos",
-            "path": "/equipment"
+            "label": "Equipos",
+            "routerLink": "/equipment"
         },
         {
             "id": 3,
-            "name": "Préstamos",
-            "path": "/loan"
+            "label": "Préstamos",
+            "routerLink": "/loan"
         },
         {
             "id": 4,
-            "name": "Laboratorios",
-            "path": "/laboratory"
+            "label": "Laboratorios",
+            "routerLink": "/laboratory"
         },
         {
             "id": 5,
-            "name": "Herramientas y Experimentos",
-            "path": "/tool-experiment"
+            "label": "Herramientas y Experimentos",
+            "routerLink": "/tool-experiment"
         },
         {
             "id": 6,
-            "name": "Estadísticas",
-            "path": "/statistics"
+            "label": "Estadísticas",
+            "routerLink": "/statistics"
         },
         {
             "id": 7,
-            "name": "Reportes",
-            "path": "/report"
+            "label": "Reportes",
+            "routerLink": "/report"
         },
         {
             "id": 6,
-            "name": "Usuarios",
-            "path": "/users"
+            "label": "Usuarios",
+            "routerLink": "/users"
         }
     ]
 }
