@@ -1,5 +1,6 @@
 export interface ItemSidenav {
-    icon: string,
+    id?: number
+    icon?: string,
     label: string,
     routerLink: string,
     routes?: ItemSidenav[]

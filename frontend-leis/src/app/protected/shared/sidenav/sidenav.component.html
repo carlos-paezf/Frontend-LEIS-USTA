@@ -17,11 +17,19 @@
     </header>
 
 
-    <section class="search">
+    <!-- <section class="search">
         <label for="search" class="search__icon">
             <i class="pi pi-search" arial-hidden="true"></i>
         </label>
         <input type="text" class="search__input" id="search" placeholder="Search" (focus)="expand()">
+    </section> -->
+
+
+    <section class="search">
+        <label for="search" class="search__icon">
+            <i class="pi pi-search" arial-hidden="true"></i>
+        </label>
+        <app-input-autocomplete></app-input-autocomplete>
     </section>
 
 

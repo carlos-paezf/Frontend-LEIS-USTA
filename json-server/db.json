@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "user": "Carlos David Páez",
+            "email": "carlos.paezf@usantoto.edu.co",
+            "password": "password"
+        }
+    ]
+}
