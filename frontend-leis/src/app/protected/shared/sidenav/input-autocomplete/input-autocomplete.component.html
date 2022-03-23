@@ -1,0 +1,9 @@
+<input type="text" class="search__input" id="search" placeholder="Buscar Item" aria-label="Search a item" matInput
+    [(ngModel)]="term" [matAutocomplete]="auto" (input)="searching()">
+    
+<mat-autocomplete #auto="matAutocomplete" (optionSelected)="optionSelected($event)" id="autocomplete">
+    <mat-option *ngFor="let item of items" [value]="item" class="search__option" [routerLink]="item.routerLink"
+        routerLinkActive="is-active" #rla="routerLinkActive" [class]="!rla ? 'search__option is-active' : 'search__option'">
+        {{ item.label }}
+    </mat-option>
+</mat-autocomplete>

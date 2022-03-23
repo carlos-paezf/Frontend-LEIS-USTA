@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemSidenav } from '../interfaces/item-sidenav';
+import { ItemsService } from '../services/items.service';
 
 
 @Component({

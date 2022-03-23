@@ -1,12 +1,13 @@
 :root {
     --gold: rgb(199, 160, 2);
+    --yellow: #F1E74A;
     --royal-blue: rgb(8, 22, 54);
 
     --primary: rgb(8, 22, 54);
     --primary-lighter: rgb(16, 36, 82);
-    --primary-light: rgb(26, 48, 97);
+    --primary-light: #2F3888;
 
-    --secondary: rgb(200, 0, 0);
+    --secondary: #D10024;
 
     --orange: rgb(209, 98, 18);
     
@@ -23,10 +24,12 @@
     --radius: 1rem;
 
     --sidenav-gutter: 1.5rem;
-    --sidenav-width: 23.5rem;
+    --sidenav-width: 24rem;
 
     --sticky-height: 5rem;
     --sticky-height-mini: 4rem;
+
+    --font-family: 'PT Serif', serif;
 }
 
 
@@ -68,6 +71,10 @@ h6 {
 }
 
 
+h1 {
+    /* color: var(--gold); */
+}
+
 
 /*! Estilos bases de la página -------------------------------------------------- */
 
@@ -89,7 +96,7 @@ body {
 	transition: scrollbar-color 200ms;
     background-color: var(--surface-a);
     display: flex;
-    font-family: var(--font-family);  
+    /* font-family: 'PT Serif', serif !important; */
     scrollbar-width: thin;
     width: 100vw;
 }
@@ -248,4 +255,61 @@ a {
     color: var(--text-on-primary);
     transition: all var(--duration);
     transform: scale(1.01);
+}
+
+
+
+/*! Contenedor del Sidenav ----------------------------------- */
+
+.sidenav.is-collapsed {
+    width: 5.5rem;
+}
+
+
+/*! Estilos del Componente InputAutoComplete ----------------- */
+app-input-autocomplete {
+    width: 100%;
+}
+
+
+/*! Input de la búsqueda ------------------------------------- */
+
+.search__input {
+    background: var(--primary-lighter);
+    border-radius: var(--radius-sm);
+    border: none;
+    color: var(--text-on-primary);
+    flex: 1 1 auto;
+    height: var(--icon-width);
+    min-width: 1px;
+    outline-offset: -2px;
+    padding: 0 var(--icon-width) 0 1rem;
+    transition-duration: var(--duration);
+    transition-property: background, color, padding;
+    width: 100%;
+}
+.search__input::placeholder {
+    color: var(--text-light);
+    transition-duration: var(--duration);
+    transition-property: color;
+}
+.search__input:focus {
+    outline: 2px solid var(--gold); 
+}
+.sidenav.is-collapsed .search__input {
+    color: transparent;
+    padding-left: 0;
+}
+.sidenav.is-collapsed .search__input:not(:hover) {
+    background: none;
+}
+.sidenav.is-collapsed .search__input::placeholder {
+    color: transparent
+}
+
+
+/*! Search en modo colapsado ------------------------------------- */
+.sidenav.is-collapsed .search {
+    opacity: 0 !important;
+    visibility: hidden;
 }
