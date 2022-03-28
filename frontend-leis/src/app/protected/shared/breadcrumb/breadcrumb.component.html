@@ -1,0 +1,17 @@
+<section class="breadcrumb">
+    <p-breadcrumb [home]="dashboard" [model]="menuItems" id="breadcrumb"></p-breadcrumb>
+
+    <app-input-autocomplete id="autocomplete" background="var(--primary)"></app-input-autocomplete>
+
+    <i class="pi pi-bell notification" id="button-notification" *ngIf="badgeNotification > 0 else withoutNotification"
+        pBadge [value]="badgeNotification.toString()" severity="danger" (click)="togglePanelNotification()"></i>
+
+    <ng-template #withoutNotification>
+        <i class="pi pi-bell notification" id="button-notification" (click)="togglePanelNotification()"></i>
+    </ng-template>
+
+
+    <app-breadcrumb-messages id="breadcrumb-messages"
+        [ngClass]="showNotification ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'"
+        *ngIf="showNotification" [messages]="messages" [unreadMessages]="badgeNotification"></app-breadcrumb-messages>
+</section>

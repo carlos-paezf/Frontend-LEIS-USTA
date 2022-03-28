@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToastrNotificationService } from '../../../services/toastr-notification.service';
+import { ToastrNotificationService } from 'src/app/services';
 
 
 @Component({

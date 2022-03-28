@@ -1,0 +1,23 @@
+.breadcrumb__messages {
+    border-radius: var(--radius);
+    box-shadow: -5px 5px 20px var(--primary-light);
+    height: 800px;
+    padding: 0;
+    position: fixed;
+    right: 1rem;
+    top: 4rem;
+    width: 700px;
+    z-index: 50;
+}
+
+.breadcrumb__messages::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    right: 21px;
+    background: var(--text-on-primary);
+    border: 1px solid var(--primary);
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+}

@@ -1,6 +1,9 @@
 /*! Contenedor del Sidenav ----------------------------------- */
 
 .sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
     background: var(--royal-blue);
     border-right: 2px solid var(--gold);
     color: var(--text-on-primary);
@@ -12,9 +15,10 @@
     padding: var(--sidenav-gutter);
     transition: width var(--duration) var(--timing);
     width: var(--sidenav-width);
+    z-index: 100;
 }
 .sidenav.is-collapsed {
-    width: 5.5rem;
+    width: var(--sidenav-mini-width);
 }
 
 
@@ -130,7 +134,7 @@
     color: var(--text-on-primary)
 }
 .sidenav.is-collapsed .sidenav__button {
-    transform: translateX(0.8rem);
+    transform: translateX(0.8rem) translateY(5rem);
 }
 
 

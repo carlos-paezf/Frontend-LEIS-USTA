@@ -111,6 +111,30 @@ export class SidenavComponent implements OnInit {
 }
 ```
 
+Vamos a usar un decorador llamado `@HostListener`, para poder controlar eventos dentro del documento. Por ejemplo, queremos que el menú que aparece cuando se presiona el botón del usuario, desaparezca cada que se presiona en sectores que no estén involucrados con el menú.
+
+```ts
+import { ..., HostListener } from '@angular/core';
+...
+
+export class SidenavComponent implements OnInit {
+    ...
+
+    @HostListener('click', ['$event']) onClickUserButton = ($event: any): void => {
+        var user_button = document.getElementById('user-button')
+        if (user_button?.contains($event.target)) {
+            this.showTooltipUser = true
+        } else {
+            this.showTooltipUser = false
+        }
+    }
+
+    public toggleTooltipUser = (): void => {
+        this.showTooltipUser = !this.showTooltipUser
+    }
+}
+```
+
 ## Template del componente
 
 El template está dividido en diversas partes:
