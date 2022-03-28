@@ -1,4 +1,4 @@
-<div class="sidenav" id="sidenav">
+<div class="sidenav is-collapsed" id="sidenav">
     <header class="sidenav__header header">
         <!-- <span class="header__icon">
             <i class="pi pi-eye"></i>
@@ -9,7 +9,7 @@
             <img [src]="isCollapsed ? '../../../../assets/escudo.png' : '../../../../assets/logo_santoto_tunja_2022.png'"
                 alt="usta">
         </div>
-        <button class="sidenav__button" aria-label="Expand" (click)="toggle()">
+        <button class="sidenav__button" aria-label="Expand" id="toggle-sidenav" (click)="toggle()">
             <span class="sidenav__button-icon">
                 <i class="pi pi-chevron-left" arial-hidden="true"></i>
             </span>
@@ -77,8 +77,8 @@
     </nav>
 
 
-    <div class="sidenav__footer user">
-        <button class="user__button">
+    <div class="sidenav__footer user" id="user-button">
+        <button class="user__button" (click)="toggleTooltipUser()">
             <div class="user__badge">
                 <div class="user__image">
                     <i class="pi pi-user" arial-hidden="true"></i>
@@ -90,5 +90,16 @@
                 <span class="user__title">Desarrollador</span>
             </div>
         </button>
+
+        <div class="sidenav__tooltip-user animate__animated animate__fadeIn" id="user-tooltip" *ngIf="showTooltipUser">
+            <ul>
+                <li (click)="logout()">
+                    <button class="btn">
+                        <i class="pi pi-power-off"></i>
+                        <label>Cerrar Sesión</label>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

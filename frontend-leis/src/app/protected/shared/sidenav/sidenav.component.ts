@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemSidenav } from '../interfaces/item-sidenav';
-import { ItemsService } from '../services/items.service';
+import { Component, HostListener, OnInit, Input } from '@angular/core';
+import { ITEMS_SIDENAV } from 'src/app/protected/mocks';
+import { ItemsMenu } from '../../interfaces';
+import { Router } from '@angular/router';
+import { ToastrNotificationService } from 'src/app/services';
 
 
 @Component({
@@ -10,82 +12,29 @@ import { ItemsService } from '../services/items.service';
 })
 export class SidenavComponent implements OnInit {
 
-    public items: ItemSidenav[] = []
-    public isCollapsed: boolean = false
+    @Input() public isCollapsed!: boolean 
+    @Input() public showTooltipUser: boolean = false
+    public items: ItemsMenu[] = []
 
 
-    constructor() { }
+    constructor(private _router: Router, private _toastr: ToastrNotificationService) { }
 
 
     ngOnInit() {
-        this.isCollapsed = document.querySelector('.is-collapsed') ? true : false
+        this.items = ITEMS_SIDENAV
+    }
 
-        this.items = [
-            {
-                icon: 'pi pi-home',
-                label: 'Dashboard',
-                routerLink: '/dashboard'
-            },
-            {
-                icon: 'pi pi-desktop',
-                label: 'Equipos',
-                routerLink: '/equipment',
-                routes: [
-                    {
-                        icon: 'pi pi-box',
-                        label: 'Inventario',
-                        routerLink: '/equipment',
-                    },
-                    {
-                        icon: 'pi pi-book',
-                        label: 'Documentación',
-                        routerLink: '/equipment',
-                    }
-                ]
-            },
-            {
-                icon: 'pi pi-comments',
-                label: 'Préstamos',
-                routerLink: '/loan'
-            },
-            {
-                icon: 'pi pi-building',
-                label: 'Laboratorios',
-                routerLink: '/laboratory'
-            },
-            {
-                icon: 'pi pi-exclamation-triangle',
-                label: 'Herramientas y Experimentos',
-                routerLink: '/tool-experiment',
-                routes: [
-                    {
-                        icon: 'pi pi-box',
-                        label: 'Inventario',
-                        routerLink: '/tool-experiment',
-                    },
-                    {
-                        icon: 'pi pi-book',
-                        label: 'Documentación',
-                        routerLink: '/tool-experiment',
-                    }
-                ]
-            },
-            {
-                icon: 'pi pi-chart-bar',
-                label: 'Estadísticas',
-                routerLink: '/statistics'
-            },
-            {
-                icon: 'pi pi-book',
-                label: 'Reportes',
-                routerLink: '/report'
-            },
-            {
-                icon: 'pi pi-users',
-                label: 'Usuarios',
-                routerLink: '/users'
-            },
-        ]
+
+    /** 
+     * A function that is called when the user clicks on the user button. 
+     */
+    @HostListener('click', ['$event']) onClickUserButton = ($event: any): void => {
+        var user_button = document.getElementById('user-button')
+        if (user_button?.contains($event.target)) {
+            this.showTooltipUser = true
+        } else {
+            this.showTooltipUser = false
+        }
     }
 
 
@@ -128,5 +77,22 @@ export class SidenavComponent implements OnInit {
         var button = document.getElementById(`list-button-${index}`)
         element?.classList.toggle('select')
         button?.classList.toggle('select')
+    }
+
+
+    /**
+     * It toggles the value of the `showTooltipUser` property
+     */
+    public toggleTooltipUser = (): void => {
+        this.showTooltipUser = !this.showTooltipUser
+    }
+
+
+    /**
+     * It logs out the user and redirects to the login page.
+     */
+    public logout = (): void => {
+        this._toastr.info('Has cerrado la sesión', 'Adiós')
+        this._router.navigate(['auth/login']);
     }
 }
