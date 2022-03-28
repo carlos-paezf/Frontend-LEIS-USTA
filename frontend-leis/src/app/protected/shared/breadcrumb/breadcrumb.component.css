@@ -1,0 +1,41 @@
+.breadcrumb {
+    height: var(--breadcrumb);
+    border-bottom: 1.5px solid var(--gold);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+#breadcrumb {
+    width: 100%;
+}
+
+
+#autocomplete {
+    position: absolute;
+    top: 15%;
+    right: 11rem;
+    width: 300px
+}
+
+
+.notification {
+    position: absolute;
+    top: 1rem;
+    right: 8rem;
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#panel__notifications {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 700px;
+    width: 700px;
+}
