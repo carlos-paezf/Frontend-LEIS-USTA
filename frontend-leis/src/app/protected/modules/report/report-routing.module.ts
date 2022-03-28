@@ -9,11 +9,18 @@ import { GenerateComponent } from './pages/generate/generate.component';
 const routes: Routes = [
     {
         path: '',
-        component: GenerateComponent
-    },
-    {
-        path: '**',
-        redirectTo: '',
+        data: { breadcrumb: 'Reportes' },
+        children: [
+            {
+                path: '',
+                data: { breadcrumb: 'Generar Reporte' },
+                component: GenerateComponent
+            },
+            {
+                path: '**',
+                redirectTo: '',
+            }
+        ]
     }
 ];
 

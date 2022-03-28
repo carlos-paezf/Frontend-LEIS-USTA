@@ -9,11 +9,18 @@ import { ListComponent } from './pages/list/list.component';
 const routes: Routes = [
     {
         path: '',
-        component: ListComponent
-    },
-    {
-        path: '**',
-        redirectTo: '',
+        data: { breadcrumb: 'Equipos' },
+        children: [
+            {
+                path: '',
+                data: { breadcrumb: 'Listado de Equipos' },
+                component: ListComponent
+            },
+            {
+                path: '**',
+                redirectTo: '',
+            }
+        ]
     }
 ];
 
