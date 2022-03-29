@@ -9,11 +9,18 @@ import { GlobalsComponent } from './pages/globals/globals.component';
 const routes: Routes = [
     {
         path: '',
-        component: GlobalsComponent
-    },
-    {
-        path: '**',
-        redirectTo: '',
+        data: { breadcrumb: 'Estadísticas' },
+        children: [
+            {
+                path: '',
+                data: { breadcrumb: 'Estadísticas Globales' },
+                component: GlobalsComponent
+            },
+            {
+                path: '**',
+                redirectTo: '',
+            }
+        ]
     }
 ];
 

@@ -1,0 +1,14 @@
+<div class="card__info">
+    <header class="card__header">
+        <h5 class="card__title">{{ title }}</h5>
+        <small class="card__unread">{{ unreadMessages }} mensajes no leídos</small>
+    </header>
+    
+    <div class="card__messages" (scroll)="onWindowScroll()" [id]="idCard">
+        <app-card-info-content *ngFor="let msg of messages" [msg]="msg"></app-card-info-content>
+
+        <button class="btn" [ngClass]="showButton ? 'btn__up animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'" *ngIf="showButton" (click)="onScrollTop()" >
+            <i class="pi pi-arrow-up"></i>
+        </button>
+    </div>
+</div>

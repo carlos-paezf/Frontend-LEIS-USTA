@@ -42,12 +42,12 @@ const protectedRoutes: Routes = [
             {
                 path: 'report',
                 loadChildren: () => import('./modules/report/report.module').then(m => m.ReportModule)
+            }, 
+            {
+                path: '**',
+                redirectTo: '/dashboard'
             }
-        ],
-    },
-    {
-        path: '**',
-        redirectTo: ''
+        ]
     }
 ]
 
