@@ -1,19 +1,19 @@
 .app {
 	display: flex;
 	flex-flow: row nowrap;
-	/* resize: both; */
 	overflow: hidden;
 	background: #fff;
-	/* border-radius: var(--radius); */
 	width: 100vw;
 	max-width: 100%;
 	min-width: var(--sidenav-width);
 	box-shadow: rgba(#000, 0.1) 0 7px 29px 0;
+	position: relative;
 }
 
 
 .content {
 	flex: 1;
-	border-radius: var(--radius);
     margin-left: 10px;
+	margin-left: var(--sidenav-mini-width);
+	background: var(--main-background);
 }
