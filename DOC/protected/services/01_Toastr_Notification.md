@@ -1,3 +1,14 @@
+# Toastr Notification
+
+Creamos un servicio para la gestión de los toastr con el siguiente comando:
+
+```txt
+ng g s services/toastr-notification --skip-tests
+```
+
+El contenido del servicio es un objeto de parámetros iniciales del los toastr. Luego, hay algunos métodos que generan los toastr según la necesidad. Los toastr son inyectados desde el servicio `ToastrServices` que vienen del paquete `ngx-toastr`.
+
+```ts
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -37,3 +48,5 @@ export class ToastrNotificationService {
         this._toastr.warning(message, title, params)
     }
 }
+
+```
