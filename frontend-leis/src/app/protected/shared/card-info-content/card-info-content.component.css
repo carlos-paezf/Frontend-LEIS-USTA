@@ -1,0 +1,122 @@
+/*! Contenedor de la tarjeta de mensaje ------------------------------------------  */
+
+.card__msg {
+    background-color: var(--text-on-primary);
+    border-radius: var(--radius-sm);
+    box-shadow: 5px 5px 5px var(--text-light);
+    color: var(--primary);
+    display: flex;
+    flex-flow: column nowrap;
+    height: 250px;
+    justify-content: space-around;
+    margin: 10px 0;
+    min-height: 250px;
+    overflow-y: hidden;
+    padding: 20px 25px;
+    transition: all var(--duration) var(--timing);
+    width: 100%;
+}
+.card__msg:hover {
+    background-color: var(--primary);
+    color: var(--gold);
+    transform: scale(1.04);
+}
+.card__msg:hover .msg__content {
+    color: var(--text-on-primary);
+}
+
+
+
+/*! Header del mensaje ----------------------------------------------------------- */
+
+.msg__header {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+
+
+/*! Indicador de Mensaje no leído ------------------------------------------------ */
+
+.msg__unread {
+    background: var(--secondary);
+    border-radius: var(--radius);
+    height: 15px;
+    margin-right: 10px;
+    width: 15px;
+}
+
+
+/*! Indicador de mensaje leído --------------------------------------------------- */
+
+.msg__read {
+    position: absolute;
+}
+
+
+/*! Titulo del mensaje ----------------------------------------------------------- */
+.msg__title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/*! Fecha del mensaje ------------------------------------------------------------ */
+
+.msg__date {
+    position: absolute;
+    right: 0;
+}
+
+
+
+/*! Contenido del mensaje -------------------------------------------------------- */
+
+.msg__content {
+    color: var(--text-light);
+    font-size: 15px;
+    height: 50%;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    width: 100%;
+}
+
+
+
+/*! Acciones para los mensajes -------------------------------------------------- */
+
+.msg__actions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+
+.btn {
+    margin-inline: 10px;
+    color: var(--text-on-primary)
+}
+
+
+/*! Botón de ver más ------------------------------------------------------------- */
+
+.btn__more {
+    background: var(--primary-light);
+}
+.btn__more:hover {
+    color: var(--gold);
+}
+
+
+.btn__check {
+    background: var(--gold);
+}
+.btn__check:hover {
+    color: var(--primary-lighter);
+}
