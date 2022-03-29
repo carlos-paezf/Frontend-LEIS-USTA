@@ -1,0 +1,12 @@
+/*! Header del titulo ------------------------------------------------------------ */
+
+.header__title {
+    align-items: center;
+    color: var(--primary);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 15px;
+    padding: 0 3%;
+    width: 100%;
+}
