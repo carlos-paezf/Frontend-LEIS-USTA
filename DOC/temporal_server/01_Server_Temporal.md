@@ -23,7 +23,7 @@ Si todo va bien, tendremos la siguiente salida:
 
   Resources
   http://localhost:3000/users
-  http://localhost:3000/views
+  http://localhost:3000/messages
 
   Home
   http://localhost:3000
@@ -46,11 +46,14 @@ El contenido de nuestro archivo será el siguiente:
         },
         ...
     ],
-    "views": [
+    "messages": [
         {
-            "id": 1,
-            "name": "Dashboard",
-            "path": "/dashboard"
+            "id": "1",
+            "title": "Expiración de mantenimiento",
+            "category": "equipment",
+            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,deleniti inventore accusamus corporis.",
+            "date": "Thu Mar 24 2022 01:37:44 GMT-0500",
+            "check": true
         },
         ...
     ]
