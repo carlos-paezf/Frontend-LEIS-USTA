@@ -9,11 +9,18 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 const routes: Routes = [
     {
         path: '',
-        component: DashboardComponent
-    },
-    {
-        path: '**',
-        redirectTo: '',
+        data: { breadcrumb: null },
+        children: [
+            {
+                path: '',
+                data: { breadcrumb: 'Dashboard' },
+                component: DashboardComponent
+            },
+            {
+                path: '**',
+                redirectTo: '',
+            }
+        ]
     }
 ];
 
