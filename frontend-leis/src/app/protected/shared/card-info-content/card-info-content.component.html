@@ -1,0 +1,14 @@
+<div class="card__msg">
+    <header class="msg__header">
+        <span [class]="msg.check ? 'msg__read' : 'msg__unread'"></span>
+        <label class="msg__title">{{ msg.title }}</label>
+        <small class="msg__date">{{ msg.date | date }}</small>
+    </header>
+
+    <article class="msg__content">{{ msg.msg }}</article>
+
+    <div class="msg__actions">
+        <button class="btn btn__check" (click)="toggleCheck()">{{ msg.check ? 'Marcar como no leído' : 'Marcar como leído' }}</button>
+        <button class="btn btn__more">Ver más</button>
+    </div>
+</div>

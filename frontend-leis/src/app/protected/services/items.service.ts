@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ItemSidenav } from '../interfaces/item-sidenav';
-import { itemsUtil } from '../../utils/items.util';
+import { ItemsMenu } from '../interfaces';
+import { ITEMS_SEARCH } from '../mocks';
 
 
 @Injectable({
@@ -8,7 +8,7 @@ import { itemsUtil } from '../../utils/items.util';
 })
 export class ItemsService {
 
-    public items: ItemSidenav[] = itemsUtil
+    public items: ItemsMenu[] = ITEMS_SEARCH
 
 
     constructor() { }
@@ -19,8 +19,8 @@ export class ItemsService {
      * @param {number} id - The id of the item you want to get.
      * @returns An ItemSidenav object
      */
-    public getItemByID = (id: number): ItemSidenav => {
-        const item: ItemSidenav[] = this.items.filter(item => item.id === id)
+    public getItemByID = (id: number): ItemsMenu => {
+        const item: ItemsMenu[] = this.items.filter(item => item.id === id)
         return item[0]
     }
 
@@ -30,8 +30,8 @@ export class ItemsService {
      * @param {string} term - The search term that is entered by the user.
      * @returns An array of items that match the search term.
      */
-    public getSuggestions = (term: string): ItemSidenav[] => {
-        const items: ItemSidenav[] = this.items.filter(item => {
+    public getSuggestions = (term: string): ItemsMenu[] => {
+        const items: ItemsMenu[] = this.items.filter(item => {
             const regex = new RegExp(`${term.toLowerCase()}[a-zA-Z]*`, 'g')
             return item.label.toLowerCase().match(regex)
         })

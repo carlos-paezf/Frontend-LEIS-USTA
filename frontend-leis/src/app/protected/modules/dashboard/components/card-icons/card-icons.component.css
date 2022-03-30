@@ -1,0 +1,42 @@
+/*! Tarjeta de los iconos ------------------------------------------------------------ */
+.card__icons {
+    align-items: center;
+    background: var(--text-on-primary);
+    border-radius: var(--radius);
+    box-shadow: 5px 5px 5px var(--text-light);
+    color: var(--primary);
+    display: flex;
+    flex-flow: column nowrap;
+    height: 200px;
+    justify-content: space-evenly;
+    margin: 15px 50px;
+    transition: all var(--duration) var(--timing);
+    width: 200px;
+}
+.card__icons:hover {
+    color: var(--orange);
+    transform: scale(1.05);
+}
+
+
+
+/*! Icono de cada tarjeta ------------------------------------------------------------ */
+
+i {
+    font-size: 100px;
+}
+
+
+
+/*! Texto de cada tarjeta ------------------------------------------------------------ */
+
+.card__label {
+    display: inline-block;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 0 15px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}

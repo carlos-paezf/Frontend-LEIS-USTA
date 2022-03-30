@@ -1,0 +1,36 @@
+/*! Contenedor general del Dashboard --------------------------------------------- */
+
+.dashboard {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin-top: 6rem;
+    width: 100%;
+}
+
+
+
+/*! Contenedor de los items de navegación ---------------------------------------- */
+
+.dashboard__items {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 30px;
+    padding: 0 100px;
+    transition: all var(--duration) var(--timing);
+}
+
+
+
+/*! Contenedor de las notificaciones --------------------------------------------- */
+
+.dashboard__info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    width: 100%;
+    margin: 30px 0;
+}

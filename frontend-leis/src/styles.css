@@ -14,10 +14,12 @@
     --text-light: #8895b5;
     --text-on-primary: #fff;
 
+    --main-background: #dddddd;
+
     --duration: 250ms;
     --timing: ease-out;
 
-    --icon-size: 1.25rem;
+    --icon-size: 1.35rem;
     --icon-width: 2.5rem;
 
     --radius-sm: .5rem;
@@ -25,6 +27,9 @@
 
     --sidenav-gutter: 1.5rem;
     --sidenav-width: 24rem;
+    --sidenav-mini-width: 5.5rem;
+
+    --breadcrumb: 3.7rem;
 
     --sticky-height: 5rem;
     --sticky-height-mini: 4rem;
@@ -32,7 +37,11 @@
     --font-family: 'PT Serif', serif;
 }
 
-
+.color1 {color: #060606;}
+.color2 {color: #0e2037;}
+.color3 {color: #294874;}
+.color4 {color: #4a79bb;}
+.color5 {color: #66a1d4;}
 
 /*! Remover todas las animaciones y transiciones que la gente no prefiere ver -- */
 
@@ -80,14 +89,13 @@ h1 {
 
 html {
 	scroll-behavior: smooth;
+    color: #212121 !important;
 }
 
 body {
     --scroll-thumb: var(--primary-lighter);
-	--scroll-track: var(--text-light);
 	align-items: center;
-	background: #cad5e8;
-	color: #212121;
+	background: #011b47;
 	flex-flow: column nowrap;
 	justify-content: center;
 	min-height: 100vh;
@@ -106,8 +114,7 @@ body::-webkit-scrollbar {
     width: 12px;
 }
 body::-webkit-scrollbar-track {
-	background: transparent;
-	border-radius: var(--radius);
+	background: var(--text-light);
     transition: background 200ms;
 }
 body::-webkit-scrollbar-thumb {
@@ -312,4 +319,83 @@ app-input-autocomplete {
 .sidenav.is-collapsed .search {
     opacity: 0 !important;
     visibility: hidden;
+}
+
+
+/*! Tooltip menú del usuario */
+
+.user {
+    position: relative;
+}
+
+.sidenav__tooltip-user {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background: var(--primary);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--radius);
+    box-shadow: -5px 5px 5px var(--primary-lighter);
+    border: 1px solid var(--primary-light);
+}
+
+.sidenav.is-collapsed .sidenav__tooltip-user {
+    bottom: 50%;
+    left: 100%;
+}
+
+.sidenav__tooltip-user ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidenav__tooltip-user li {
+    width: 100%;
+}
+
+.sidenav__tooltip-user li button {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    color: var(--text-light);
+    transition-property: color, background;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing);
+}
+
+.sidenav__tooltip-user li button:hover {
+    color: var(--text-on-primary);
+    background: var(--primary-light);
+}
+
+
+
+/*! Botón para hacer scroll Up -------------------------------- */
+
+.btn__up {
+    background: var(--secondary);
+    bottom: 1000px;
+    color: white;
+    opacity: 1;
+    position: absolute;
+    transition: all var(--duration) var(--timing);
+    z-index: 20;
+}
+.btn__up:hover {
+    transform: scale(1.2);
+}
+
+.btn__up-disable {
+    opacity: 0;
+    transition: all var(--duration) var(--timing);
 }

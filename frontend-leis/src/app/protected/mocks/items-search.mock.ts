@@ -1,6 +1,6 @@
-import { ItemSidenav } from "../shared/interfaces/item-sidenav";
+import { ItemsMenu } from "../interfaces";
 
-export const itemsUtil: ItemSidenav[] = [
+export const ITEMS_SEARCH: ItemsMenu[] = [
     {
         "id": 1,
         "label": "Dashboard",

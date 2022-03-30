@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<div class="dashboard" id="dashboard">
+    <app-title [title]="'Dashboard'"></app-title>
+
+    <div class="dashboard__items">
+        <app-card-icons *ngFor="let item of items; let i = index" [id]="'card-item-'+i" [icon]="item.icon!"
+            [label]="item.label" [route]="item.routerLink" [color]="item.color!"></app-card-icons>
+    </div>
+
+    <div class="dashboard__info">
+        <app-card-info [title]="'Alertas de Equipos'" [messages]="msgEquipment" [unreadMessages]="unreadMsgEquipment"
+            [idCard]="'1'">
+        </app-card-info>
+        <app-card-info [title]="'Alertas de Préstamos'" [messages]="msgLoan" [unreadMessages]="unreadMsgLoan"
+            [idCard]="'2'">
+        </app-card-info>
+    </div>
+</div>
