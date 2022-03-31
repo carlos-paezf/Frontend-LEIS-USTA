@@ -4,7 +4,7 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
     {
         id: 1,
         icon: 'pi pi-home',
-        label: 'Dashboard',
+        label: 'Inicio',
         routerLink: '/dashboard'
     },
     {
@@ -63,7 +63,15 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 6,
         icon: 'pi pi-chart-bar',
         label: 'Estadísticas',
-        routerLink: '/statistics'
+        routerLink: '/statistics',
+        routes: [
+            {
+                id: 6.1,
+                icon: 'pi pi-chart-bar',
+                label: 'Estadísticas Individuales',
+                routerLink: '/statistics/individual-statistics'
+            }
+        ]
     },
     {
         id: 7,
@@ -75,6 +83,14 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 8,
         icon: 'pi pi-users',
         label: 'Usuarios',
-        routerLink: '/users'
+        routerLink: '/users',
+        routes: [
+            {
+                id: 8.1,
+                icon: 'pi pi-users',
+                label: 'Listado de Usuarios',
+                routerLink: '/users/list-users'
+            }
+        ]
     },
 ]
