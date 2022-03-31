@@ -3,7 +3,7 @@ import { ItemsMenu } from "../interfaces";
 export const ITEMS_SEARCH: ItemsMenu[] = [
     {
         "id": 1,
-        "label": "Dashboard",
+        "label": "Inicio",
         "routerLink": "/dashboard"
     },
     {
@@ -28,8 +28,8 @@ export const ITEMS_SEARCH: ItemsMenu[] = [
     },
     {
         "id": 6,
-        "label": "Estadísticas",
-        "routerLink": "/statistics"
+        "label": "Estadísticas Individuales",
+        "routerLink": "/statistics/individual-statistics"
     },
     {
         "id": 7,
