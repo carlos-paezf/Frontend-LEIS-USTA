@@ -13,7 +13,7 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                data: { breadcrumb: 'Dashboard' },
+                data: { breadcrumb: 'Inicio' },
                 component: DashboardComponent
             },
             {
