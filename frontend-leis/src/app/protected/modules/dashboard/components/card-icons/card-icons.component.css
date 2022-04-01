@@ -23,7 +23,7 @@
 /*! Icono de cada tarjeta ------------------------------------------------------------ */
 
 i {
-    font-size: 100px;
+    font-size: 75px;
 }
 
 
@@ -37,6 +37,6 @@ i {
     padding: 0 15px;
     text-align: center;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: wrap;
     width: 100%;
 }

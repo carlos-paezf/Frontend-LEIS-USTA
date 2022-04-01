@@ -4,7 +4,7 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
     {
         id: 1,
         icon: 'pi pi-home',
-        label: 'Dashboard',
+        label: 'Inicio',
         routerLink: '/dashboard'
     },
     {
@@ -77,7 +77,15 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 6,
         icon: 'pi pi-chart-bar',
         label: 'Estadísticas',
-        routerLink: '/statistics'
+        routerLink: '/statistics',
+        routes: [
+            {
+                id: 6.1,
+                icon: 'pi pi-chart-bar',
+                label: 'Estadísticas Individuales',
+                routerLink: '/statistics/individual-statistics'
+            }
+        ]
     },
     {
         id: 7,
@@ -104,6 +112,5 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
               routerLink: '/users/assing-roles',
           }
       ]
-
     },
 ]

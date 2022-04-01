@@ -1,0 +1,164 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/"> Préstamo de Equipos (Devolucion) </a>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h2 id="equipotxt">Formato de Devolucion de Equipo</h2>
+            <div class="form-group">
+              <label for="" class="form-label">Nombre del Equipo:</label>
+            </div>
+            <div class="form-group">
+              <select class="form-select">
+                <option selected>Equipo</option>
+                <option value="1">Probeta</option>
+                <option value="2">Embudo</option>
+                <option value="3">Tubo de Ensayo</option>
+              </select>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label">cantidad de Entrega:</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                placeholder="Cantidad"
+                class="form-control"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label">Estado del Equipo:</label>
+            </div>
+            <div class="form-group">
+              Limpio:
+              <input
+                type="radio"
+                class="form-check-input"
+                name="check"
+                id="radioSi"
+                value="si"
+              />
+              <label class="form-check-label" for="radioSi"> Sí </label>
+              <input
+                type="radio"
+                class="form-check-input"
+                name="check"
+                id="radioNo"
+                value="no"
+              />
+              <label class="form-check-label" for="radioNo"> No </label>
+            </div>
+            <div class="form-group">
+              Correcto Funcionamiento:
+              <input
+                type="radio"
+                class="form-check-input"
+                name="check"
+                id="radioSi"
+                value="si"
+              />
+              <label class="form-check-label" for="radioSi"> Sí </label>
+              <input
+                type="radio"
+                class="form-check-input"
+                name="check"
+                id="radioNo"
+                value="no"
+              />
+              <label class="form-check-label" for="radioNo"> No </label>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label">Observaciones:</label>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="Observaciones"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5 mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h2 id="equipotxt">Formato de Devolucion (Persona)</h2>
+            <div class="form-group">
+              <label for="" class="form-label">Laboratorio:</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Laboratorio"
+                class="form-control"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label">Codigo de la Solicitud:</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Ingrese el codigo que genero la solicitud"
+                class="form-control"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label"
+                >Documento del Solicitante:</label
+              >
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Documento" class="form-control" />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label">Nombre del Solicitante:</label>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Nombre" class="form-control" />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label"
+                >Fecha y Hora de Devolucion :</label
+              >
+            </div>
+            <div class="form-group">
+              <input type="datetime-local" class="form-control" />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="" class="form-label">Encargado que recibe :</label>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Encargado" class="form-control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1 mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <button type="submit" class="btn btn-dark">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

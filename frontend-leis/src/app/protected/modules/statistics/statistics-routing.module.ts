@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GlobalsComponent } from './pages/globals/globals.component';
+import { IndividualStatisticsComponent } from './pages/individual-statistics/individual-statistics.component';
 
 
 /**
@@ -15,6 +16,11 @@ const routes: Routes = [
                 path: '',
                 data: { breadcrumb: 'Estadísticas Globales' },
                 component: GlobalsComponent
+            },
+            {
+                path: 'individual-statistics',
+                data: { breadcrumb: 'Estadísticas Individuales' },
+                component: IndividualStatisticsComponent
             },
             {
                 path: '**',

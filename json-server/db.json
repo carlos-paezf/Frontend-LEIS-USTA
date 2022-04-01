@@ -157,7 +157,6 @@
       "observaciones": "La daño y se niega a pagarla"
     }
   ],
-
   "messages": [
     {
       "id": "1",
@@ -173,7 +172,7 @@
       "category": "equipment",
       "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
       "date": "Thu Mar 24 2022 11:37:44 GMT-0500",
-      "check": true
+      "check": false
     },
     {
       "id": "3",
