@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GeneralEquipmentComponent } from './general-equipment/general-equipment.component';
 import { GlobalsComponent } from './pages/globals/globals.component';
 
 
@@ -13,9 +14,14 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                data: { breadcrumb: 'Estadísticas Globales' },
+                data: { breadcrumb: 'Estadísticas Individuales' },
                 component: GlobalsComponent
             },
+            {
+              path: 'statistics-general',
+              data: { breadcrumb: 'Estadísticas Generales' },
+              component: GeneralEquipmentComponent
+          },
             {
                 path: '**',
                 redirectTo: '',
