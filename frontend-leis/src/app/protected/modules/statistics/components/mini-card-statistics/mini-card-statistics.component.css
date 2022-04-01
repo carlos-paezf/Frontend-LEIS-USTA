@@ -1,0 +1,30 @@
+.statistics__mini-card {
+    align-items: center;
+    background: var(--text-on-primary);
+    display: flex;
+    flex-flow: column nowrap;
+    height: 225px;
+    justify-content: space-evenly;
+    margin: 25px 15px;
+    width: 225px;
+    border-right: 1px solid var(--text-light);
+    padding: 0 25px;
+}
+
+
+.mini-card__value {
+    font-size: 25px;
+    text-align: left;
+    white-space: wrap;
+    width: 100%;
+}
+
+
+.mini-card__label {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    white-space: wrap;
+    width: 100%;
+    color: var(--primary-light);
+}
