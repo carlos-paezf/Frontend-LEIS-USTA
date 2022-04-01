@@ -69,7 +69,21 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 6,
         icon: 'pi pi-chart-bar',
         label: 'Estadísticas',
-        routerLink: '/statistics'
+        routerLink: '/statistics',
+        routes: [
+          {
+              id: 6.1,
+              icon: 'pi pi-box',
+              label: 'Estadisticas individuales',
+              routerLink: '/statistics/statistics-individual',
+          },
+          {
+            id: 6.2,
+            icon: 'pi pi-box',
+            label: 'Estadisticas Generales',
+            routerLink: '/statistics/statistics-general',
+        }
+        ]
     },
     {
         id: 7,
