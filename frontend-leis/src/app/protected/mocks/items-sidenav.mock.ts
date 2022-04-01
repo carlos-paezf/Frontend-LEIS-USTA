@@ -16,15 +16,21 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
             {
                 id: 2.1,
                 icon: 'pi pi-prime',
-                label: 'Administración de Equipos',
-                routerLink: '/equipment/admin-equipment',
+                label: 'Listar de Equipos',
+                routerLink: '/equipment/list-equipment',
             },
             {
                 id: 2.2,
                 icon: 'pi pi-book',
                 label: 'Documentación',
-                routerLink: '/equipment',
-            }
+                routerLink: '/equipment/technical-data-sheets',
+            },
+            {
+              id: 2.3,
+              icon: 'bi bi-clipboard2-check',
+              label: 'Administrar Equipos',
+              routerLink: '/equipment/manage-users',
+          }
         ]
     },
     {
@@ -79,12 +85,18 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         label: 'Estadísticas',
         routerLink: '/statistics',
         routes: [
-            {
-                id: 6.1,
-                icon: 'pi pi-chart-bar',
-                label: 'Estadísticas Individuales',
-                routerLink: '/statistics/individual-statistics'
-            }
+          {
+              id: 6.1,
+              icon: 'pi pi-box',
+              label: 'Estadisticas individuales',
+              routerLink: '/statistics/statistics-individual',
+          },
+          {
+            id: 6.2,
+            icon: 'pi pi-box',
+            label: 'Estadisticas Generales',
+            routerLink: '/statistics/statistics-general',
+          }
         ]
     },
     {
