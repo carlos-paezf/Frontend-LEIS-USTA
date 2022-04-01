@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MsgGeneric } from '../interfaces';
 
-
 @Injectable({
     providedIn: 'root'
 })
