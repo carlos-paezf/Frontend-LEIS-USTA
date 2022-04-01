@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatAutocompleteModule,
         MatCardModule,
         ToastrModule,
-        MatProgressBarModule
+        MatProgressBarModule,
         FormsModule,
         ReactiveFormsModule
     ]

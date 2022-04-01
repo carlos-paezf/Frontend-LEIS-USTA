@@ -13,7 +13,7 @@ import { ReturnLoanComponent } from './pages/return-loan/return-loan.component';
 @NgModule({
     declarations: [
         ListComponent,
-        ListLoanEquipmentComponent
+        ListLoanEquipmentComponent,
         EquipmentLoanComponent,
         LoanRequestComponent,
         ReturnLoanComponent
