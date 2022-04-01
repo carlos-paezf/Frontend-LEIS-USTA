@@ -1,1 +1,107 @@
-<p>list users works!</p>
+<div class="roles_list">
+  <p-table #dt [value]="users" dataKey="id" [rowHover]="true" [rows]="10"
+  [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" responsiveLayout="scroll"
+  [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [filterDelay]="0"
+  [globalFilterFields]="['name','users.name']">
+  <ng-template pTemplate="caption">
+    <div class="table-header">
+      Lista de Usuarios
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          placeholder="Busqueda Global" />
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="id">
+        <div class="flex justify-content-between align-items-center">
+          Documento
+          <p-sortIcon field="id"></p-sortIcon>
+          <p-columnFilter type="text" field="id" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+      <th pSortableColumn="name">
+        <div class="flex justify-content-between align-items-center">
+          Nombres
+          <p-sortIcon field="name"></p-sortIcon>
+          <p-columnFilter type="text" field="name" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+      <th pSortableColumn="lastName">
+        <div class="flex justify-content-between align-items-center">
+          Apellidos
+          <p-sortIcon field="lastName"></p-sortIcon>
+          <p-columnFilter type="text" field="lastName" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="email">
+        <div class="flex justify-content-between align-items-center">
+          E-mail
+          <p-sortIcon field="email"></p-sortIcon>
+          <p-columnFilter type="text" field="email" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="rol">
+        <div class="flex justify-content-between align-items-center">
+          Rol
+          <p-sortIcon field="rol"></p-sortIcon>
+          <p-columnFilter type="text" field="rol" display="menu" currency="USD" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="status">
+        <div class="flex justify-content-between align-items-center">
+          Estado
+          <p-sortIcon field="status"></p-sortIcon>
+          <p-columnFilter field="status" matchMode="equals" display="menu" class="ml-auto">
+            <!-- <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)" placeholder="Any">
+                <ng-template let-option pTemplate="item">
+                  <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+              </p-dropdown>
+            </ng-template> -->
+          </p-columnFilter>
+        </div>
+      </th>
+
+
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-users>
+    <tr class="p-selectable-row">
+      <td>
+        <span class="p-column-title">Document</span>
+        <span class="id">{{users.id}}</span>
+      </td>
+      <td>
+        <span class="p-column-title">Name</span>
+        {{users.name}}
+      </td>
+      <td>
+        <span class="p-column-title">LastName</span>
+        {{users.lastName}}
+      </td>
+      <td>
+        <span class="p-column-title">E-mail</span>
+        {{users.email}}
+      </td>
+      <td>
+        <span class="p-column-title">Rol</span>
+        {{users.rol}}
+      </td>
+
+      <td>
+        <span class="p-column-title">Status</span>
+
+        <span [class]="'status-' + users.status">{{users.status}}</span>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+</div>

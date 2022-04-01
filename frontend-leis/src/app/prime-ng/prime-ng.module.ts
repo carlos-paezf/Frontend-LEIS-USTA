@@ -7,6 +7,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { TableModule } from 'primeng/table';
 import {DropdownModule} from 'primeng/dropdown';
 import {MultiSelectModule} from 'primeng/multiselect';
+import {EditorModule} from 'primeng/editor';
+import {TreeSelectModule} from 'primeng/treeselect';
+import {ButtonModule} from 'primeng/button';
+
+
 @NgModule({
     exports: [
         BreadcrumbModule,
@@ -17,6 +22,10 @@ import {MultiSelectModule} from 'primeng/multiselect';
         TableModule,
         DropdownModule,
         MultiSelectModule
+        EditorModule,
+        TreeSelectModule,
+        ButtonModule
     ]
 })
+
 export class PrimeNgModule { }

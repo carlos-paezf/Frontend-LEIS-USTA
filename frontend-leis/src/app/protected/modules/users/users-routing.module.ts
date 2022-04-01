@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { AssignRolesComponent } from './pages/assign-roles/assign-roles.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './pages/list/list.component';
 
@@ -12,13 +13,19 @@ const routes: Routes = [
         data: { breadcrumb: 'Usuarios' },
         children: [
             {
-                path: '',
+                path: 'list-users',
                 data: { breadcrumb: 'Listado de Usuarios' },
                 component: ListComponent
             },
             {
+                path: 'assing-roles',
+                data: { breadcrumb: 'Asignación de roles' },
+                component: AssignRolesComponent
+            },
+
+            {
                 path: '**',
-                redirectTo: '',
+                redirectTo: 'list-users',
             }
         ]
     }

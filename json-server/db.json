@@ -1,161 +1,266 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "user": "Carlos David Páez",
-            "email": "carlos.paezf@usantoto.edu.co",
-            "password": "password"
-        }
-    ],
-    "equipment": [
-        {
-          "item": 1,
-          "nameEquipment": "Ordenador",
-          "inventory": "12",
-          "model": "Dell",
-          "serie": "DRCS12G"
-        },
-        {
-            "item": 2,
-            "nameEquipment": "Herramientas",
-            "inventory": "100",
-            "model": "wolfs",
-            "serie": "GUC3JS"
-          },
-          {
-            "item": 3,
-            "nameEquipment": "Palas",
-            "inventory": "50",
-            "model": "Carban",
-            "serie": "VJUEKSW9"
-          },
-          {
-            "item": 4,
-            "nameEquipment": "Pulidora",
-            "inventory": "10",
-            "model": "HAMMER",
-            "serie": "JDJ8ASD0"
-          },
-          {
-            "item": 5,
-            "nameEquipment": "Mangera Gas",
-            "inventory": "32",
-            "model": "Flex",
-            "serie": "NDK7S12"
-          },
-          {
-            "item": 6,
-            "nameEquipment": "Picos",
-            "inventory": "21",
-            "model": "HAMMER",
-            "serie": "JDJCI81"
-          }
+  "users": [
+    {
+      "id": 1053665001,
+      "name": "Carlos David",
+      "lastName": "Paez",
+      "email": "carlos.paezf@usantoto.edu.co",
+      "rol": "Laboratorista",
+      "status": true,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1050665001,
+      "name": "Sergio Alejandro",
+      "lastName": "Gil",
+      "email": "sergio.gile@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": false,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1052664001,
+      "name": "Jairo Eduardo",
+      "lastName": "Garcia ",
+      "email": "jairo@usantoto.edu.co",
+      "rol": "Laboratorista",
+      "status": false,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1053662001,
+      "name": "Angelica Maria",
+      "lastName": "Acosta",
+      "email": "angelica@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": true,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1055667001,
+      "name": "Daniel Sebastian",
+      "lastName": "Vargas",
+      "email": "sebastian.vargas@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": false,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1077663001,
+      "name": "Paula Andrea",
+      "lastName": "Avellaneda",
+      "email": "paula.avellaneda@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": true,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1057664001,
+      "name": "Julian Ricardo",
+      "lastName": "Mojica",
+      "email": "julian.mojica@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": false,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1055662000,
+      "name": "Manuela",
+      "lastName": "Gaitan",
+      "email": "manuela.gaitan@usantoto.edu.co",
+      "rol": "Laboratorista",
+      "status": false,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1049661011,
+      "name": "Ivan Dario",
+      "lastName": "Perez",
+      "email": "ivan.perez@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": true,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 1053668002,
+      "name": "Felipe",
+      "lastName": "Martinez",
+      "email": "felipe.martinez@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": false,
+      "loans": "Prestamos"
+    },
+    {
+      "id": 103771007,
+      "name": "Camilo Andres",
+      "lastName": "Escobar",
+      "email": "camilo.escobar@usantoto.edu.co",
+      "rol": "Estudiante",
+      "status": true,
+      "loans": "Prestamos"
+    }
+  ],
 
-      ],
-    "messages": [
-        {
-            "id": "1",
-            "title": "Expiración de mantenimiento",
-            "category": "equipment",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 24 2022 01:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "2",
-            "title": "Expiración de mantenimiento",
-            "category": "equipment",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 24 2022 11:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "3",
-            "title": "Expiración de mantenimiento",
-            "category": "equipment",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 14 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "4",
-            "title": "Expiración de mantenimiento",
-            "category": "equipment",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 21 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "5",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo eum cum tempore eos.  Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,  deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 15 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "6",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 08 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "7",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 25 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "8",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 01 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "9",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 11 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "10",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 22 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "11",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 19 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "12",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 17 2022 21:37:44 GMT-0500",
-            "check": true
-        },
-        {
-            "id": "13",
-            "title": "Equipo no entregado a tiempo",
-            "category": "loan",
-            "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
-            "date": "Thu Mar 17 2022 21:37:44 GMT-0500",
-            "check": true
-        }
-    ]
+  "loan": [
+    {
+      "id": 1053665001,
+      "name": "Carlos David Paez",
+      "lastName": "Paez",
+      "email": "carlos.paezf@usantoto.edu.co",
+      "cargo": "Laboratorista",
+      "prestamos": "Computador",
+      "observaciones": "Se entrego en buen estado"
+    },
+    {
+      "id": 1050665001,
+      "name": "Sergio Alejandro",
+      "lastName": "Gil",
+      "email": "sergio.gile@usantoto.edu.co",
+      "cargo": "Estudiante",
+      "prestamos": "Bascula Electronica",
+      "observaciones": "Se entrego en buen estado"
+    },
+    {
+      "id": 1053662001,
+      "name": "Angelica Maria",
+      "lastName": "Acosta",
+      "email": "angelica@usantoto.edu.co",
+      "cargo": "Estudiante",
+      "prestamos": "Micrometro",
+      "observaciones": "Se entrego en buen estado"
+    },
+    {
+      "id": 1077663001,
+      "name": "Paula Andrea",
+      "lastName": "Avellaneda",
+      "email": "paula.avellaneda@usantoto.edu.co",
+      "cargo": "Estudiante",
+      "prestamos": "Multimetro",
+      "observaciones": "Se entrego en buen estado"
+    },
+    {
+      "id": 1057664001,
+      "name": "Julian Ricardo",
+      "lastName": "Mojica",
+      "email": "julian.mojica@usantoto.edu.co",
+      "cargo": "Estudiante",
+      "prestamos": "Aparato de caida libre",
+      "observaciones": "Se entrego en buen estado"
+    },
+    {
+      "id": 1055662000,
+      "name": "Manuela",
+      "lastName": "Gaitan",
+      "email": "manuela.gaitan@usantoto.edu.co",
+      "cargo": "Laboratorista",
+      "prestamos": "Brujula",
+      "observaciones": "La daño y se niega a pagarla"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "title": "Expiración de mantenimiento",
+      "category": "equipment",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 24 2022 01:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "2",
+      "title": "Expiración de mantenimiento",
+      "category": "equipment",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 24 2022 11:37:44 GMT-0500",
+      "check": false
+    },
+    {
+      "id": "3",
+      "title": "Expiración de mantenimiento",
+      "category": "equipment",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 14 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "4",
+      "title": "Expiración de mantenimiento",
+      "category": "equipment",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 21 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "5",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illo eum cum tempore eos.  Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel,  deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 15 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "6",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 08 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "7",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 25 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "8",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 01 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "9",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 11 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "10",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 22 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "11",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 19 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "12",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 17 2022 21:37:44 GMT-0500",
+      "check": true
+    },
+    {
+      "id": "13",
+      "title": "Equipo no entregado a tiempo",
+      "category": "loan",
+      "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
+      "date": "Thu Mar 17 2022 21:37:44 GMT-0500",
+      "check": true
+    }
+  ]
 }

@@ -17,7 +17,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 30px;
+    margin-bottom: 30px;
     padding: 0 100px;
     transition: all var(--duration) var(--timing);
 }
