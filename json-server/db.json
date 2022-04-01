@@ -7,6 +7,51 @@
             "password": "password"
         }
     ],
+    "equipment": [
+        {
+          "item": 1,
+          "nameEquipment": "Ordenador",
+          "inventory": "12",
+          "model": "Dell",
+          "serie": "DRCS12G"
+        },
+        {
+            "item": 2,
+            "nameEquipment": "Herramientas",
+            "inventory": "100",
+            "model": "wolfs",
+            "serie": "GUC3JS"
+          },
+          {
+            "item": 3,
+            "nameEquipment": "Palas",
+            "inventory": "50",
+            "model": "Carban",
+            "serie": "VJUEKSW9"
+          },
+          {
+            "item": 4,
+            "nameEquipment": "Pulidora",
+            "inventory": "10",
+            "model": "HAMMER",
+            "serie": "JDJ8ASD0"
+          },
+          {
+            "item": 5,
+            "nameEquipment": "Mangera Gas",
+            "inventory": "32",
+            "model": "Flex",
+            "serie": "NDK7S12"
+          },
+          {
+            "item": 6,
+            "nameEquipment": "Picos",
+            "inventory": "21",
+            "model": "HAMMER",
+            "serie": "JDJCI81"
+          }
+
+      ],
     "messages": [
         {
             "id": "1",
