@@ -14,9 +14,9 @@ const routes: Routes = [
         data: { breadcrumb: 'Estadísticas' },
         children: [
             {
-              path: 'statistics-general',
-              data: { breadcrumb: 'Estadísticas Generales' },
-              component: GeneralEquipmentComponent
+                path: 'general-statistics',
+                data: { breadcrumb: 'Estadísticas Generales' },
+                component: GeneralEquipmentComponent
             },
             {
                 path: 'individual-statistics',
@@ -25,7 +25,7 @@ const routes: Routes = [
             },
             {
                 path: '**',
-                redirectTo: 'statistics-general',
+                redirectTo: 'general-statistics',
             }
         ]
     }

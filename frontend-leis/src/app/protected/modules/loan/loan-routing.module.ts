@@ -19,8 +19,8 @@ const routes: Routes = [
                 component: ListComponent
             },
             {
-                path:'request',
-                data:{breadcrumb:'Solitud de prestamos'},
+                path: 'request',
+                data: { breadcrumb: 'Solicitud de préstamos' },
                 component: LoanRequestComponent
             },
             {
@@ -30,7 +30,7 @@ const routes: Routes = [
             },
             {
                 path: '**',
-                redirectTo: '',
+                redirectTo: 'loan-users',
             }
         ]
     }
