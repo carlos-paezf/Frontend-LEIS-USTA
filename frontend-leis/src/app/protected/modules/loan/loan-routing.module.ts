@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListLoanEquipmentComponent } from './pages/list-loan-equipment/list-loan-equipment.component';
 import { ListComponent } from './pages/list/list.component';
 import { LoanRequestComponent } from './pages/loan-request/loan-request.component';
 
@@ -13,14 +14,19 @@ const routes: Routes = [
         data: { breadcrumb: 'Préstamos' },
         children: [
             {
-                path: '',
-                data: { breadcrumb: 'Listado de Préstamos' },
+                path: 'loan-users',
+                data: { breadcrumb: 'Préstamos Usuarios' },
                 component: ListComponent
             },
             {
                 path:'request',
                 data:{breadcrumb:'Solitud de prestamos'},
                 component: LoanRequestComponent
+            },
+            {
+                path: 'loan-equipment',
+                data: { breadcrumb: 'Préstamos Equipos' },
+                component: ListLoanEquipmentComponent
             },
             {
                 path: '**',

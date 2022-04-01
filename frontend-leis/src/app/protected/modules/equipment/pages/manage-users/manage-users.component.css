@@ -108,13 +108,12 @@ mat-grid-tile {
   height: 500px;
   padding: 25px;
 }
-
 .photo img {
-  border: 2px solid black;
+  border: 2px solid orange;
   border-radius: 1rem;
-  width: 60%;
-  height: 65%;
-  /* object-fit: cover; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   box-shadow: 5px 5px 5px rgb(8, 22, 54);
   transition: all 200ms ease-in-out;
 }
@@ -142,43 +141,39 @@ mat-grid-tile {
   margin-left: 12px;
   margin-bottom: 50px;
 }
-.boton{
-  justify-content: right;
 
-}
-.roles{
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-size: 19px;
-  background: var(--primary);
-  color: white;
-  width: 22%;
-  height: 100%;
-  border-radius: 15px;
-  margin-bottom: 0cm;
-}
 .cod {
   align-items: center;
   display: flex;
   justify-content: center;
-  font-size: 19px;
+  font-size: 20px;
   background: var(--primary);
   color: white;
   width: 22%;
-  height: 100%;
+  height: 110%;
   border-radius: 15px;
-  margin-bottom: 0cm;
 }
 .cod2{
-  margin-top: 2px;
+  /* margin-top: 2px; */
   align-items: center;
   display: flex;
   justify-content: center;
-  border: 2px solid orange;
+  width: 30%;
+  height: 30%;
+  /* border: 2px solid orange; */
   border-radius: 15px;
-  background-color: antiquewhite;
-
+  background-color: red;
+}
+.cod3{
+  /* margin-top: 2px; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 30%;
+  /* border: 2px solid orange; */
+  border-radius: 15px;
+  background-color: green;
 }
 
 .title input {
@@ -207,13 +202,15 @@ mat-grid-tile {
 }
 
 .section{
-  width: 90%;
-  height: 300px;
+  width: 60%;
+  height: 200px;
   /* border: 1px solid red; */
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
   justify-content: center;
-  padding: 25px;
+  /* padding: 5px; */
+  border-radius: 20px;
+  margin-left: 300px;
 
 }

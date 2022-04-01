@@ -213,7 +213,7 @@
     transition-property: color;
 }
 .search__input:focus {
-    outline: 2px solid var(--gold); 
+    outline: 2px solid var(--gold);
 }
 .sidenav.is-collapsed .search__input {
     color: transparent;
@@ -261,7 +261,7 @@
     border-radius: var(--radius);
 }
 .nav::-webkit-scrollbar-thumb {
-    background: var(--text-light); 
+    background: var(--text-light);
     border-radius: var(--radius);
 }
 .nav::-webkit-scrollbar-corner {
