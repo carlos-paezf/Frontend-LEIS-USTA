@@ -25,7 +25,7 @@ export const ITEMS_DASHBOARD: ItemsMenu[] = [
     },
     {
         id: 4,
-        icon: 'pi pi-exclamation-triangle',
+        icon: 'bi bi-tools',
         label: 'Herramientas y Experimentos',
         routerLink: '/tool-experiment',
         color: '#f4d000'
