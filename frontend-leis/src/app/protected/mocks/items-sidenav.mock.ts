@@ -31,7 +31,16 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 3,
         icon: 'pi pi-comments',
         label: 'Préstamos',
-        routerLink: '/loan'
+        routerLink: '/loan',
+        routes:[
+            {
+                id: 3.1,
+                icon: 'pi pi-comments',
+                label: 'Solicitud Prestamos',
+                routerLink:'/loan/request'
+
+            }
+        ]
     },
     {
         id: 4,

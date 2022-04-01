@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './pages/list/list.component';
+import { LoanRequestComponent } from './pages/loan-request/loan-request.component';
 
 
 /**
@@ -15,6 +16,11 @@ const routes: Routes = [
                 path: '',
                 data: { breadcrumb: 'Listado de Préstamos' },
                 component: ListComponent
+            },
+            {
+                path:'request',
+                data:{breadcrumb:'Solitud de prestamos'},
+                component: LoanRequestComponent
             },
             {
                 path: '**',
