@@ -1,1 +1,104 @@
-<p>list loan works!</p>
+<p-table #dt [value]="loans" dataKey="id" styleClass="p-datatable-customers" [rowHover]="true" [rows]="10"
+  [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" responsiveLayout="scroll"
+  [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [filterDelay]="0"
+  [globalFilterFields]="['name','country.name','representative.name','status']">
+  <ng-template pTemplate="caption">
+    <div class="table-header">
+     Historial Prestamos Usuarios
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          placeholder="Busqueda Global" />
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="id">
+        <div class="flex justify-content-between align-items-center">
+          Documento
+          <p-sortIcon field="id"></p-sortIcon>
+          <p-columnFilter type="text" field="id" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+      <th pSortableColumn="name">
+        <div class="flex justify-content-between align-items-center">
+          Nombres
+          <p-sortIcon field="name"></p-sortIcon>
+          <p-columnFilter type="text" field="name" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+      <th pSortableColumn="lastName">
+        <div class="flex justify-content-between align-items-center">
+          Apellidos
+          <p-sortIcon field="lastName"></p-sortIcon>
+          <p-columnFilter type="text" field="lastName" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="cargo">
+        <div class="flex justify-content-between align-items-center">
+          Cargo
+          <p-sortIcon field="cargo"></p-sortIcon>
+          <p-columnFilter type="text" field="cargo" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="email">
+        <div class="flex justify-content-between align-items-center">
+          E-mail
+          <p-sortIcon field="email"></p-sortIcon>
+          <p-columnFilter type="text" field="email" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="equipo-prestado">
+        <div class="flex justify-content-between align-items-center">
+          Eq.Prestado
+          <p-sortIcon field="equipo-prestado"></p-sortIcon>
+          <p-columnFilter type="text" field="equipo-prestado" display="menu" currency="USD" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="observaciones">
+        <div class="flex justify-content-between align-items-center">
+          Observaciones
+          <p-sortIcon field="observaciones"></p-sortIcon>
+          <p-columnFilter inputmode="text" field="observaciones" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-loans>
+    <tr class="p-selectable-row">
+      <td>
+        <span class="p-column-title">Document</span>
+        <span class="id">{{loans.id}}</span>
+      </td>
+      <td>
+        <span class="p-column-title">Name</span>
+        {{loans.name}}
+      </td>
+      <td>
+        <span class="p-column-title">LastName</span>
+        {{loans.lastName}}
+      </td>
+      <td>
+        <span class="p-column-title">Cargo</span>
+        {{loans.cargo}}
+      </td>
+      <td>
+        <span class="p-column-title">E-mail</span>
+        {{loans.email}}
+      </td>
+      <td>
+        <span class="p-column-title">Eq-Prestado</span>
+        {{loans.prestamos}}
+      </td>
+      <td>
+        <span class="p-column-title">Observaciones</span>
+        {{loans.observaciones}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
