@@ -7,12 +7,15 @@ import { TechnicalDataSheetsComponent } from './pages/technical-data-sheets/tech
 import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
 import { ManageUsersComponent } from './pages/manage-users/manage-users.component';
 import { PrimeNgModule } from 'src/app/prime-ng/prime-ng.module';
+import { GeneralEquipmentComponent } from '../statistics/general-equipment/general-equipment.component';
 
 @NgModule({
     declarations: [
         ListComponent,
         TechnicalDataSheetsComponent,
         ManageUsersComponent,
+        GeneralEquipmentComponent
+
 
     ],
     imports: [
