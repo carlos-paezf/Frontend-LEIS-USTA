@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListLoanEquipmentComponent } from './pages/list-loan-equipment/list-loan-equipment.component';
 import { ListComponent } from './pages/list/list.component';
 import { LoanRequestComponent } from './pages/loan-request/loan-request.component';
+import { ReturnLoanComponent } from './pages/return-loan/return-loan.component';
 
 
 /**
@@ -22,6 +23,11 @@ const routes: Routes = [
                 path: 'request',
                 data: { breadcrumb: 'Solicitud de préstamos' },
                 component: LoanRequestComponent
+            },
+            {
+                path: 'return',
+                data: { breadcrumb: 'Formato de Devolucion' },
+                component: ReturnLoanComponent
             },
             {
                 path: 'loan-equipment',
