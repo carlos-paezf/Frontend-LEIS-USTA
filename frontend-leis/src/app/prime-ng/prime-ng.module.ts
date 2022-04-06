@@ -21,7 +21,7 @@ import {ButtonModule} from 'primeng/button';
         ToastrModule,
         TableModule,
         DropdownModule,
-        MultiSelectModule
+        MultiSelectModule,
         EditorModule,
         TreeSelectModule,
         ButtonModule
