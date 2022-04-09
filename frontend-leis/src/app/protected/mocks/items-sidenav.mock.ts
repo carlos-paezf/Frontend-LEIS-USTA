@@ -63,7 +63,16 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 4,
         icon: 'pi pi-building',
         label: 'Laboratorios',
-        routerLink: '/laboratory'
+        routerLink: '/laboratory',
+        routes: [
+          {
+            id:4.1,
+            icon:'pi pi-building',
+            label: 'laboratorio Santo Domingo',
+            routerLink:'/laboratory/SantoDominngo'
+
+          },
+        ]
     },
     {
         id: 5,
