@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GeneralEquipmentComponent } from './general-equipment/general-equipment.component';
 import { GlobalsComponent } from './pages/globals/globals.component';
 import { IndividualStatisticsComponent } from './pages/individual-statistics/individual-statistics.component';
 
@@ -13,9 +14,9 @@ const routes: Routes = [
         data: { breadcrumb: 'Estadísticas' },
         children: [
             {
-                path: '',
-                data: { breadcrumb: 'Estadísticas Globales' },
-                component: GlobalsComponent
+                path: 'general-statistics',
+                data: { breadcrumb: 'Estadísticas Generales' },
+                component: GeneralEquipmentComponent
             },
             {
                 path: 'individual-statistics',
@@ -24,7 +25,7 @@ const routes: Routes = [
             },
             {
                 path: '**',
-                redirectTo: '',
+                redirectTo: 'general-statistics',
             }
         ]
     }

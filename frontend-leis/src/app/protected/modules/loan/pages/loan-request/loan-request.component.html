@@ -1,10 +1,7 @@
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="/"> Préstamo de Equipos (Solicitud) </a>
-</nav>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-5 mt-4">
+    <div class="col-sm-5 mt-5">
       <div class="card">
         <div class="card-body">
           <div class="card-title">
@@ -17,6 +14,7 @@
                 type="text"
                 placeholder="Inserte el codigo de inventario"
                 class="form-control"
+                required
               />
             </div>
             <br />
@@ -89,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-5 mt-4">
+    <div class="col-sm-5 mt-5">
       <div class="card">
         <div class="card-body">
           <div class="card-title">
@@ -154,11 +152,65 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-1 mt-4">
+    <div class="col-sm-1 mt-5">
       <div class="card">
         <div class="card-body">
           <div class="card-title">
-            <button type="submit" class="btn btn-dark">Solicitar</button>
+            <button
+              type="button"
+              class="btn btn-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#modalSolicitar"
+            >
+              Solicitar
+            </button>
+            <div
+              class="modal fade"
+              id="modalSolicitar"
+              tabindex="-1"
+              aria-hidden="true"
+              aria-labelledby="modalTitle"
+              data-bs-backdrop="static"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">
+                      Solicitud Realizada con Éxito
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <label class="form-label">ID de la solicitud: </label>
+                    <p>123456</p>
+                    <label class="form-label">Codigo de la solicitud:</label>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-dismiss="modal"
+                    >
+                      Aceptar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

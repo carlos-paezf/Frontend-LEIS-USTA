@@ -4,6 +4,6 @@ export interface User{
   lastName: string,
   email: string,
   rol: string,
-  status: boolean,
+  status: string,
   loans: string
 }

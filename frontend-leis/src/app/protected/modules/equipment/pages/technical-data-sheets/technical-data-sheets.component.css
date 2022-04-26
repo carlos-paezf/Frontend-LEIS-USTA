@@ -1,0 +1,43 @@
+.sticky__nav {
+  align-items: center;
+  background: linear-gradient(rgb(10, 30, 78), rgb(8, 22, 56));
+  border-bottom: 2px solid var(--gold);
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 1 auto;
+  height: var(--sticky-height);
+  padding-inline: calc(var(--sticky-height) * 0.9);
+  position: fixed;
+  transition: all var(--duration);
+  width: 100vw;
+  z-index: 10;
+}
+.sticky__nav.sticky {
+  height: var(--sticky-height-mini);
+}
+
+
+.auth__img {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+}
+.auth__img img {
+  height: 100%;
+}
+
+
+.auth__links {
+  align-items: center;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: calc(100vw * 0.2);
+}
+.equipmentadmin2 {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100% auto;
+  width: 100%;
+  background: gray;
+}

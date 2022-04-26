@@ -1,1 +1,91 @@
-<p>list equipment works!</p>
+<p-table #dt [value]="equipments" dataKey="id"  [rowHover]="true" [rows]="10"
+  [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" responsiveLayout="scroll"
+  [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [filterDelay]="0"
+  [globalFilterFields]="['name','country.name','representative.name','status']">
+  <ng-template pTemplate="caption">
+    <div class="table-header">
+     Listado Equipos
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          placeholder="       Búsqueda Global " />
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="item">
+        <div class="flex justify-content-between align-items-center">
+          Item
+          <p-sortIcon field="item"></p-sortIcon>
+          <p-columnFilter type="text" field="item" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+      <th pSortableColumn="nombre-equipo">
+        <div class="flex justify-content-between align-items-center">
+          Nombre Equipo
+          <p-sortIcon field="nombre-equipo"></p-sortIcon>
+          <p-columnFilter type="text" field="nombre-equipo" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+
+      <th pSortableColumn="inventario">
+        <div class="flex justify-content-between align-items-center">
+          Inventario
+          <p-sortIcon field="inventario"></p-sortIcon>
+          <p-columnFilter type="text" field="inventario" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="modelo">
+        <div class="flex justify-content-between align-items-center">
+          Modelo
+          <p-sortIcon field="modelo"></p-sortIcon>
+          <p-columnFilter type="text" field="modelo" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="serie">
+        <div class="flex justify-content-between align-items-center">
+          Serie
+          <p-sortIcon field="serie"></p-sortIcon>
+          <p-columnFilter type="text" field="serie" display="menu" class="ml-auto"></p-columnFilter>
+        </div>
+      </th>
+      <th pSortableColumn="">
+        <div class="flex justify-content-between align-items-center">
+          Icono
+        </div>
+      </th>
+
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-equipments>
+    <tr class="p-selectable-row">
+      <td>
+        <span class="p-column-title">Item</span>
+        <span class="item">{{equipments.item}}</span>
+      </td>
+      <td>
+        <span class="p-column-title">NameEquipment</span>
+        {{equipments.nameEquipment}}
+      </td>
+      <td>
+        <span class="p-column-title">Inventory</span>
+        {{equipments.inventory}}
+      </td>
+      <td>
+        <span class="p-column-title">Modelo</span>
+        {{equipments.model}}
+      </td>
+      <td>
+        <span class="p-column-title">Serie</span>
+        {{equipments.serie}}
+      </td>
+      <td>
+        <span class="p-column-title">Icon</span>
+        {{equipments.icon}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
