@@ -9,7 +9,7 @@ import { Equipment } from '../interfaces/list-equipment';
 })
 
 export class EquipmentService {
-  public urlEndpoint: string = 'http://localhost:3000/equipment'
+  public urlEndpoint: string = 'http://localhost:3000/equips'
     constructor(private _http: HttpClient) {}
 
    public getEquipment = (): Observable<Equipment[]> => {

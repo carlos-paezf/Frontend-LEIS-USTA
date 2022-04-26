@@ -56,6 +56,12 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
                 icon: 'bi bi-wrench-adjustable-circle',
                 label: 'Préstamos por Equipo',
                 routerLink: '/loan/loan-equipment'
+            },
+            {
+                id: 3.4,
+                icon: 'pi pi-comments',
+                label: 'Devolucion Prestamo',
+                routerLink: '/loan/return'
             }
         ]
     },
