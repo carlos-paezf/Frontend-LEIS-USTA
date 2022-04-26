@@ -1,7 +1,8 @@
 import { UserService } from './../../../../services/users.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/protected/interfaces';
-
+import { ConfirmationService } from 'primeng/api';
+import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -11,10 +12,15 @@ import { User } from 'src/app/protected/interfaces';
 export class ListComponent implements OnInit {
 
   users: User[] =[];
+  user: User;
+  userDialog: boolean;
   statuses: any[] = [];
   loading: boolean = true;
 
-  constructor(private _userService: UserService) {}
+  constructor(private _userService: UserService) {
+    this.user = { id: 0, name:"", lastName:"", email:"", rol:"", status: "", loans:""};
+    this.userDialog =true;
+  }
 
   ngOnInit(): void {
 
@@ -30,4 +36,13 @@ export class ListComponent implements OnInit {
         {label: 'En mora', value: 'unqualified'}
       ]
   };
+
+  editUser(user: User) {
+    this.user = { ...user };
+    this.userDialog = true;
+  }
+
+  deleteUser(user: User) {
+
+  }
 };

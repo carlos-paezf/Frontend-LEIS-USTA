@@ -8,7 +8,7 @@
       <span class="p-input-icon-left">
         <i class="pi pi-search"></i>
         <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
-          placeholder="Busqueda Global" />
+          placeholder="       Búsqueda Global " />
       </span>
     </div>
   </ng-template>
@@ -51,6 +51,12 @@
           <p-columnFilter type="text" field="serie" display="menu" class="ml-auto"></p-columnFilter>
         </div>
       </th>
+      <th pSortableColumn="">
+        <div class="flex justify-content-between align-items-center">
+          Icono
+        </div>
+      </th>
+
     </tr>
   </ng-template>
 
@@ -75,6 +81,10 @@
       <td>
         <span class="p-column-title">Serie</span>
         {{equipments.serie}}
+      </td>
+      <td>
+        <span class="p-column-title">Icon</span>
+        {{equipments.icon}}
       </td>
     </tr>
   </ng-template>

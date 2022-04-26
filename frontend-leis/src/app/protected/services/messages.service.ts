@@ -10,7 +10,6 @@ export class MessagesService {
 
     public urlEndpoint: string = 'http://localhost:3000/messages'
 
-
     constructor(private _http: HttpClient) { }
 
 
@@ -74,4 +73,6 @@ export class MessagesService {
     public deleteMessage = (id: string): Observable<MsgGeneric> => {
         return this._http.delete<MsgGeneric>(`${this.urlEndpoint}/${id}`)
     }
+
+
 }

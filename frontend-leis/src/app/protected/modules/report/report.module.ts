@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { PrimeNgModule } from 'src/app/prime-ng/prime-ng.module';
 import { ReportRoutingModule } from './report-routing.module';
 import { GenerateComponent } from './pages/generate/generate.component';
 
@@ -11,7 +11,8 @@ import { GenerateComponent } from './pages/generate/generate.component';
     ],
     imports: [
         CommonModule,
-        ReportRoutingModule
+        ReportRoutingModule,
+        PrimeNgModule
     ]
 })
 export class ReportModule { }

@@ -6,7 +6,7 @@
       "lastName": "Paez",
       "email": "carlos.paezf@usantoto.edu.co",
       "rol": "Laboratorista",
-      "status": true,
+      "status": "Entregado",
       "loans": "Prestamos"
     },
     {
@@ -15,7 +15,7 @@
       "lastName": "Gil",
       "email": "sergio.gile@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": false,
+      "status": "En mora",
       "loans": "Prestamos"
     },
     {
@@ -24,7 +24,7 @@
       "lastName": "Garcia ",
       "email": "jairo@usantoto.edu.co",
       "rol": "Laboratorista",
-      "status": false,
+      "status":"En mora",
       "loans": "Prestamos"
     },
     {
@@ -33,7 +33,7 @@
       "lastName": "Acosta",
       "email": "angelica@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": true,
+      "status": "En mora",
       "loans": "Prestamos"
     },
     {
@@ -42,7 +42,7 @@
       "lastName": "Vargas",
       "email": "sebastian.vargas@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": false,
+      "status": "Entregado",
       "loans": "Prestamos"
     },
     {
@@ -51,7 +51,7 @@
       "lastName": "Avellaneda",
       "email": "paula.avellaneda@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": true,
+      "status": "Entregado",
       "loans": "Prestamos"
     },
     {
@@ -60,7 +60,7 @@
       "lastName": "Mojica",
       "email": "julian.mojica@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": false,
+      "status": "En mora",
       "loans": "Prestamos"
     },
     {
@@ -69,7 +69,7 @@
       "lastName": "Gaitan",
       "email": "manuela.gaitan@usantoto.edu.co",
       "rol": "Laboratorista",
-      "status": false,
+      "status": "En mora",
       "loans": "Prestamos"
     },
     {
@@ -78,7 +78,7 @@
       "lastName": "Perez",
       "email": "ivan.perez@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": true,
+      "status": "Entregado",
       "loans": "Prestamos"
     },
     {
@@ -87,7 +87,7 @@
       "lastName": "Martinez",
       "email": "felipe.martinez@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": false,
+      "status": "Entregado",
       "loans": "Prestamos"
     },
     {
@@ -96,11 +96,10 @@
       "lastName": "Escobar",
       "email": "camilo.escobar@usantoto.edu.co",
       "rol": "Estudiante",
-      "status": true,
+      "status": "En mora",
       "loans": "Prestamos"
     }
   ],
-
   "loan": [
     {
       "id": 1053665001,
@@ -212,7 +211,7 @@
       "category": "loan",
       "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
       "date": "Thu Mar 25 2022 21:37:44 GMT-0500",
-      "check": true
+      "check": false
     },
     {
       "id": "8",
@@ -261,6 +260,44 @@
       "msg": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit illo eum cum tempore eos. Quod consequatur consequuntur quaerat placeat error odit temporibus at ullam autem vel, deleniti inventore accusamus corporis.",
       "date": "Thu Mar 17 2022 21:37:44 GMT-0500",
       "check": true
+    }
+  ],
+  "equips": [
+    {
+      "item": 1,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 2,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 3,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 4,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 5,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1",
+  "icon": "bi bi-trash3"
     }
   ]
 }
