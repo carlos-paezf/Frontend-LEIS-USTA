@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
+    "@popperjs/core": "^2.11.5",
     "animate.css": "^4.1.1",
     "bootstrap": "^3.4.1",
     "bootstrap-icons": "^1.8.1",

@@ -1,0 +1,150 @@
+<div class="container">
+  <div class="starter-template">
+    <div class="row">
+      <div class="col-md-12 mt-5">
+
+        <h1>Creacion Laboratorio</h1>
+        <br />
+        <form [formGroup]="AdministrarForm" (ngSubmit)="onSubmit()">
+          <!-- Nombre laboratorio -->
+          <div class="mb-2 row">
+            <label class="col-sm-2 text-dark">Nombre Laboratorio</label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="nomLab"
+                name="nomLab"
+                required
+                formControlName="nomLab"
+              />
+              <div
+                *ngIf="AdministrarForm.get('nomLab')?.touched && AdministrarForm.get('nomLab')?.errors?.['required']"
+                class="alert alert-danger"
+              >
+                Este campo es requerido
+              </div>
+
+              <div
+                *ngIf="AdministrarForm.get('nomLab')?.touched && AdministrarForm.get('nomLab')?.errors?.['minlength']"
+                class="alert alert-danger"
+              >
+                Nombre laboratorio debe de tener mas de
+                {{AdministrarForm.get('nomLab')?.errors?.['minlength'].requiredLength}}
+                caracteres
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <!-- Ubicación -->
+
+          <div class="mb-2 row">
+            <label class="col-sm-2 text-dark">Ubicación</label>
+            <div class="col-sm-8">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option></option>
+                <option>Campus Avenida Universitaria</option>
+                <option>Edificio Santo Domingo</option>
+                <input
+                  class="form-control form-control-sm"
+                  id="ubicacion"
+                  name="ubicacion"
+                  required
+                  formControlName="ubicacion"
+                />
+              </select>
+            </div>
+          </div>
+
+          <br />
+          <!-- Aforo -->
+
+          <div class="mb-2 row">
+            <label class="col-sm-2 text-dark">Aforo</label>
+            <div class="col-sm-8">
+              <input
+                type="number"
+                class="form-control form-control-sm"
+                id="aforo"
+                name="aforo"
+                required
+                formControlName="aforo"
+              />
+              <div
+                *ngIf="AdministrarForm.get('aforo')?.touched && AdministrarForm.get('aforo')?.errors?.['required']"
+                class="alert alert-danger"
+              >
+                Este campo es requerido
+              </div>
+            </div>
+          </div>
+
+          <br />
+           <!-- Capacidad de equipos -->
+          <div class="mb-2 row">
+            <label class="col-sm-2 text-dark">Capacidad de equipos</label>
+            <div class="col-sm-8">
+              <input
+                type="number"
+                class="form-control form-control-sm"
+                id="capEqui"
+                name="capEqui"
+                required
+                formControlName="capEqui"
+              />
+              <div
+                *ngIf="AdministrarForm.get('capEqui')?.touched && AdministrarForm.get('capEqui')?.errors?.['required']"
+                class="alert alert-danger"
+              >
+                Este campo es requerido
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <!-- Descripción -->
+          <div class="mb-2 row">
+            <label for="desc" class="col-sm-2 text-dark">Descripción</label>
+            <textarea
+              class="form-control"
+              name="desc"
+              id="desc"
+              rows="4"
+              placeholder="Descripción obligatoria"
+              formControlName="desc"
+              required
+            ></textarea>
+
+            <div
+              *ngIf="AdministrarForm.get('desc')?.touched && AdministrarForm.get('desc')?.errors?.['required']"
+              class="alert alert-danger"
+            >
+              Este campo es requerido
+            </div>
+            <div
+              *ngIf="AdministrarForm.get('desc')?.touched && AdministrarForm.get('desc')?.errors?.['minlength']"
+              class="alert alert-danger"
+            >
+              La descripción debe de tener mas de
+              {{AdministrarForm.get('desc')?.errors?.['minlength'].requiredLength}}
+              caracteres
+            </div>
+
+            <div class="col-sm-8"></div>
+          </div>
+
+          <!--Guardar -->
+
+
+          <button type="submit" [disabled]="!AdministrarForm.valid" class="btn btn-primary btn-lg btn-block" >
+            Guardar
+          </button>
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

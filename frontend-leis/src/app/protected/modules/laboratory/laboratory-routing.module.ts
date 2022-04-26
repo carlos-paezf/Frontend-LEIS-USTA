@@ -1,40 +1,38 @@
+import { ListarComponent } from './pages/listar/listar.component';
+import { AdministrarComponent } from './pages/administrar/administrar.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListComponent } from './pages/list/list.component';
-import { SantoDomingoComponent } from './pages/santo-domingo/santo-domingo.component';
-
 
 /**
  * Rutas del componente de Laboratorio
  */
 const routes: Routes = [
-    {
-        path: '',
-        data: { breadcrumb: 'Laboratorios' },
-        children: [
-            {
-                path: '',
-                data: { breadcrumb: 'Listado de Laboratorios' },
-                component: ListComponent
-            },
-            {
-              path: 'SantoDominngo',
-              data : {breadcrumb: 'Laboratorios Santo Domingo'},
-              component: SantoDomingoComponent
+  {
+    path: '',
+    data: { breadcrumb: 'Laboratorios' },
+    children: [
+      {
+        path: 'Administrar',
+        data: { breadcrumb: 'Administrar' },
+        component: AdministrarComponent,
+      },
+      {
+        path: 'Listar',
+        data: { breadcrumb: 'Listado' },
+        component: ListarComponent,
+      },
 
-
-            },
-            {
-                path: '**',
-                redirectTo: '',
-            }
-        ]
-    }
+      {
+        path: '**',
+        redirectTo: '',
+      },
+    ],
+  },
 ];
 
-
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class LaboratoryRoutingModule { }
+export class LaboratoryRoutingModule {}
