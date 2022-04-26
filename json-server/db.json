@@ -262,5 +262,43 @@
       "date": "Thu Mar 17 2022 21:37:44 GMT-0500",
       "check": true
     }
+  ],
+  "equips": [
+    {
+      "item": 1,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 2,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 3,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 4,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1"
+    },
+    {
+      "item": 5,
+  "nameEquipment": "Ordenador",
+  "inventory": "5",
+  "model": "Lenovo",
+  "serie": "X31f1",
+  "icon": "bi bi-trash3"
+    }
   ]
 }
