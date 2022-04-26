@@ -14,4 +14,10 @@ export class UserService {
    public getUsers = (): Observable<User[]> => {
       return this._http.get<User[]>(this.urlEndpoint)
     }
+
+    status: string[] = ['OUTOFSTOCK', 'INSTOCK', 'LOWSTOCK'];
+
+    generateStatus() {
+      return this.status[Math.floor(Math.random() * Math.floor(3))];
+  }
 }
