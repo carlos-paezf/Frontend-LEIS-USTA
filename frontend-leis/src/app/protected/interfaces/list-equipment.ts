@@ -3,5 +3,6 @@ export interface Equipment{
   nameEquipment: string,
   inventory: string,
   model: string,
-  serie: string
+  serie: string,
+  icon?: string
 }
