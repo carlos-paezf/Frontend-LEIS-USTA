@@ -46,22 +46,22 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
                 routerLink: '/loan/loan-users'
             },
             {
-                id: 3.1,
-                icon: 'pi pi-comments',
-                label: 'Solicitud Prestamos',
-                routerLink: '/loan/request'
-            },
-            {
-                id: 3.3,
+                id: 3.2,
                 icon: 'bi bi-wrench-adjustable-circle',
                 label: 'Préstamos por Equipo',
                 routerLink: '/loan/loan-equipment'
             },
             {
+                id: 3.3,
+                icon: 'bi bi-file-earmark-person-fill',
+                label: 'Préstamos',
+                routerLink: '/loan/loan-list'
+            },
+            {
                 id: 3.4,
-                icon: 'pi pi-comments',
-                label: 'Devolucion Prestamo',
-                routerLink: '/loan/return'
+                icon: 'bi bi-journal-arrow-down',
+                label: 'Crear Prestamo',
+                routerLink: '/loan/loan-create'
             }
         ]
     },
