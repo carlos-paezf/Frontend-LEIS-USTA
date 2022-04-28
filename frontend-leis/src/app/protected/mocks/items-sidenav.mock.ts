@@ -46,22 +46,22 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
                 routerLink: '/loan/loan-users'
             },
             {
-                id: 3.1,
-                icon: 'pi pi-comments',
-                label: 'Solicitud Prestamos',
-                routerLink: '/loan/request'
-            },
-            {
-                id: 3.3,
+                id: 3.2,
                 icon: 'bi bi-wrench-adjustable-circle',
                 label: 'Préstamos por Equipo',
                 routerLink: '/loan/loan-equipment'
             },
             {
+                id: 3.3,
+                icon: 'bi bi-file-earmark-person-fill',
+                label: 'Préstamos',
+                routerLink: '/loan/loan-list'
+            },
+            {
                 id: 3.4,
-                icon: 'pi pi-comments',
-                label: 'Devolucion Prestamo',
-                routerLink: '/loan/return'
+                icon: 'bi bi-journal-arrow-down',
+                label: 'Crear Prestamo',
+                routerLink: '/loan/loan-create'
             }
         ]
     },
@@ -69,7 +69,24 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 4,
         icon: 'pi pi-building',
         label: 'Laboratorios',
-        routerLink: '/laboratory'
+        routerLink: '/laboratory',
+        routes: [
+          {
+            id:4.1,
+            icon:'bi bi-clipboard2-check',
+            label: 'Administrar ',
+            routerLink:'/laboratory/Administrar'
+
+          },
+          {
+            id:4.2,
+            icon:'pi pi-book',
+            label: 'Listado de Laboratorios',
+            routerLink:'/laboratory/Listar'
+          },
+
+
+        ]
     },
     {
         id: 5,
