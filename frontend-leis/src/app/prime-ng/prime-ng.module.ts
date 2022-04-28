@@ -11,6 +11,7 @@ import {EditorModule} from 'primeng/editor';
 import {TreeSelectModule} from 'primeng/treeselect';
 import {ButtonModule} from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
+
 @NgModule({
     exports: [
         BreadcrumbModule,

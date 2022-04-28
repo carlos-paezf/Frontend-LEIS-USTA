@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerateComponent implements OnInit {
 
-    constructor() {
-  }
+  text: string;
+  uploadedFiles: any[] = [];
 
+    constructor() {
+      this.text = '<div>Bienvenido!!</div><div>Escribe aqui!! <b>Reportes estudiantes</b> en mora..</div><div><br></div>';
+
+  }
   ngOnInit(): void {}
   }

@@ -24,7 +24,14 @@
       </div>
       <div class="title">
         <label for="" class="cod">Rol:</label>
-        <p-treeSelect [(ngModel)]="selectedNode" [options]="nodes" placeholder="Seleccionar Rol"></p-treeSelect>
+        <div class="form-group">
+          <select class="form-select">
+            <option selected>Seleccione Rol</option>
+            <option value="1">Administrador</option>
+            <option value="2">Estudiante</option>
+            <option value="3">Laboratorista</option>
+          </select>
+        </div>
       </div>
     </div>
     <p-button class= "boton" label="Guardar" icon="pi pi-check" iconPos="right"></p-button>
