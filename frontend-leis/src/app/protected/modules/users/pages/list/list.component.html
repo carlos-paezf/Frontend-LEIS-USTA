@@ -5,9 +5,8 @@
   [globalFilterFields]="['name','users.name']">
   <ng-template pTemplate="caption">
     <div class="table-header">
-      Lista de Usuarios
+      LISTA DE USUARIOS
       <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
         <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
           placeholder="Busqueda Global" />
       </span>
@@ -75,6 +74,7 @@
     </tr>
   </ng-template>
 
+
   <ng-template pTemplate="body" let-users>
     <tr class="p-selectable-row">
       <td>
@@ -110,5 +110,4 @@
     </tr>
   </ng-template>
 </p-table>
-
 </div>

@@ -11,7 +11,7 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 2,
         icon: 'pi pi-desktop',
         label: 'Equipos',
-        routerLink: '/equipment',
+        routerLink: '/equipment/list-equipment',
         routes: [
             {
                 id: 2.1,

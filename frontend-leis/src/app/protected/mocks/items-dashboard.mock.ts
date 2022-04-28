@@ -6,7 +6,7 @@ export const ITEMS_DASHBOARD: ItemsMenu[] = [
         id: 1,
         icon: 'pi pi-desktop',
         label: 'Equipos',
-        routerLink: '/equipment',
+        routerLink: '/equipment/list-equipment',
         color: '#ff0f08'
     },
     {

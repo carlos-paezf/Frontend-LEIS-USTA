@@ -7,7 +7,7 @@ import { ListComponent } from './pages/list/list.component';
 import { AssignRolesComponent } from './pages/assign-roles/assign-roles.component';
 import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
 import { CreateRolComponent } from './pages/create-rol/create-rol.component';
-
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -19,7 +19,8 @@ import { CreateRolComponent } from './pages/create-rol/create-rol.component';
         CommonModule,
         UsersRoutingModule,
         MaterialDesignModule,
-        PrimeNgModule
+        PrimeNgModule,
+        SharedModule
     ]
 })
 export class UsersModule { }

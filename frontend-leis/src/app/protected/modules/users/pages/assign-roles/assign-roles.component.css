@@ -138,19 +138,12 @@ margin-right: 70px;
   border-radius: 15px;
   margin-bottom: 0cm;
 }
-.cod2{
-  margin-top: 2px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border: 2px solid orange;
-  border-radius: 15px;
-  background-color: antiquewhite;
-
-}
-
 .title input {
   border-radius: 10px;
-  width: 75%;
+  width: 70%;
   height: 100%;
  }
+.form-group{
+  width: 50%;
+  border-radius: 10px;
+}

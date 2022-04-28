@@ -9,7 +9,7 @@ export const ITEMS_SEARCH: ItemsMenu[] = [
     {
         "id": 2,
         "label": "Equipos",
-        "routerLink": "/equipment"
+        "routerLink": "/equipment/list-equipment"
     },
     {
         "id": 3,
