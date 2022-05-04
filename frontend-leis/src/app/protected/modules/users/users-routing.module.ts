@@ -2,8 +2,7 @@ import { AssignRolesComponent } from './pages/assign-roles/assign-roles.componen
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './pages/list/list.component';
-
-
+import { CreateRolComponent} from './pages/create-rol/create-rol.component'
 /**
  * Rutas del componente de Usuarios
  */
@@ -22,6 +21,11 @@ const routes: Routes = [
                 data: { breadcrumb: 'Asignación de roles' },
                 component: AssignRolesComponent
             },
+            {
+              path: 'create-roles',
+              data: { breadcrumb: 'Creacion de roles' },
+              component: CreateRolComponent
+          },
 
             {
                 path: '**',

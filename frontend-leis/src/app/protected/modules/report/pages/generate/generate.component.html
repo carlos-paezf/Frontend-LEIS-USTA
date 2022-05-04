@@ -1,30 +1,39 @@
-<mat-card style="border-radius: 1rem; width: 80%; margin-left: 150px; background-color: rgb(8, 22, 54); margin-top: 70px;">
-  <h1 style="color: aliceblue; text-align: center">Reportes</h1>
+<div class="report">
+  <h1>Reportes</h1>
+  <br />
+  <div class="dest">
+    <label>Para:</label>
+    <input
+      style="border-radius: 10px; width: 40%"
+      type="text"
+      class="form-control"
+      placeholder="ejemplo@usantoto.edu.co"
+    />
 
-<div class="report_info">
-  <br>
-     <label style="color: aliceblue;" >Para:</label>
-    <input style="border-radius: 10px; width: 35%;
-    height: 110%;" type="text" class="form-control" placeholder="ejemplo@usantoto.edu.co" />
+    <br />
 
-<br>
-  <div class="asunto">
-    <label style="color: aliceblue; ">Asunto:</label>
-    <input style="border-radius: 10px; width: 35% ;
-    height: 110%;" type="text" class="form-control" placeholder=" " />
+    <label>Asunto:</label>
+    <input
+      style="border-radius: 10px; width: 45%"
+      type="text"
+      class="form-control"
+      placeholder=" "
+    />
   </div>
   <br />
   <p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
-  <br/>
+  <br />
 
-  <div class="card">
-    <h4>Adjuntar archivos</h4>
-    <div class="section">
-      <p-fileUpload name="myfile[]" url="./upload.php" style="margin-left: 50px"></p-fileUpload>
-    </div>
+  <h5>Adjuntar archivos</h5>
 
-    <p-button style="text-align: center;" label="Enviar" icon="pi pi-send" iconPos="right"></p-button>
+  <p-fileUpload
+    name="myfile[]"
+    url="./upload.php"
+    style="margin-left: 50px"
+  ></p-fileUpload>
+
+  <br />
+  <div class="button">
+    <button pButton pRipple type="button" label="Enviar" icon="pi pi-send" class="p-button-rounded p-button-secondary" ></button>
   </div>
 </div>
-</mat-card>
-
