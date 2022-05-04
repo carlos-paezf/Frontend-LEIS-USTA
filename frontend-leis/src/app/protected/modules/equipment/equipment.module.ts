@@ -14,7 +14,7 @@ import { GeneralEquipmentComponent } from '../statistics/general-equipment/gener
         ListComponent,
         TechnicalDataSheetsComponent,
         ManageUsersComponent,
-        GeneralEquipmentComponent
+        GeneralEquipmentComponent,
 
 
     ],

@@ -49,16 +49,17 @@
   width: 200px;
   height: 200px;
   margin: 20px;
-  background: lightsteelblue;
+  background: white;
   text-align: center;
   border-radius: 15px;
   border: 2px solid black;
+  color: black;
 }
 .equipmentpanel2 {
   width: 500px;
   height: 500px;
   margin: 20px;
-  background: lightsteelblue;
+  background: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -82,5 +83,6 @@
   width: 90%;
   margin: 5rem;
   align-items: center;
-  background: gray;
+  background: rgb(209, 204, 204);
+  border-radius: 2rem;
 }

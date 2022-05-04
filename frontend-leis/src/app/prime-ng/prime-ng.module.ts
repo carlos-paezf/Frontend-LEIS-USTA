@@ -10,7 +10,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import {EditorModule} from 'primeng/editor';
 import {TreeSelectModule} from 'primeng/treeselect';
 import {ButtonModule} from 'primeng/button';
-
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
     exports: [
@@ -24,7 +24,8 @@ import {ButtonModule} from 'primeng/button';
         MultiSelectModule,
         EditorModule,
         TreeSelectModule,
-        ButtonModule
+        ButtonModule,
+        ChartModule
     ]
 })
 
