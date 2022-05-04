@@ -1,0 +1,212 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">Solicitar Prestamo:</span>
+          <form [formGroup]="prestamoForm" (ngSubmit)="agregarPrestamo()">
+            <div class="mt-3">
+              <label for="fecha_prestamo" class="form-label float-start"
+                >Fecha Prestamo :</label
+              >
+              <input
+                class="form-control form-control-sm"
+                type="text"
+                formControlName="fecha_prestamo"
+                name="FechaPrestamo"
+                placeholder="Fecha de prestamo"
+                onclick="ocultarError();"
+                onfocus="(this.type='datetime-local')"
+                onblur="(this.type='text')"
+              />
+              <div
+                class="text-danger"
+                *ngIf="
+                  prestamoForm.get('fecha_prestamo')?.hasError('required') &&
+                  prestamoForm.get('fecha_prestamo')?.touched
+                "
+              >
+                <span>Fecha de Prestamo <strong>Es Obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label for="estado_entrega" class="form-label float-start"
+                >Estado Entrega :</label
+              >
+              <input
+                type="text"
+                id="estado_entrega"
+                name="estado_entrega"
+                formControlName="estado_entrega"
+                class="form-control form-control-sm"
+                placeholder="Estado de Entrega"
+              />
+              <div
+                class="text-danger"
+                *ngIf="
+                  prestamoForm.get('estado_entrega')?.hasError('required') &&
+                  prestamoForm.get('estado_entrega')?.touched
+                "
+              >
+                <span>Estado de Entrega <strong>Es Obligatorio</strong></span>
+              </div>
+            </div>
+
+            <div class="mt-2">
+              <label for="lugar_destino" class="form-label float-start"
+                >Lugar destino :</label
+              >
+              <input
+                type="text"
+                id="lugar_destino"
+                name="lugar_destino"
+                formControlName="lugar_destino"
+                class="form-control form-control-sm"
+                placeholder="Lugar Destino"
+              />
+              <div
+                class="text-danger"
+                *ngIf="
+                  prestamoForm.get('lugar_destino')?.hasError('required') &&
+                  prestamoForm.get('lugar_destino')?.touched
+                "
+              >
+                <span>Lugar destino <strong>Es Obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label for="cantidad" class="form-label float-start"
+                >Cantidad :</label
+              >
+              <input
+                type="number"
+                id="cantidad"
+                name="cantidad"
+                formControlName="cantidad"
+                class="form-control form-control-sm"
+                placeholder="Cantidad"
+              />
+              <div
+                class="text-danger"
+                *ngIf="
+                  prestamoForm.get('cantidad')?.hasError('required') &&
+                  prestamoForm.get('cantidad')?.touched
+                "
+              >
+                <span>Cantidad <strong>Es Obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label class="form-label float-start">Externo/Interno :</label>
+              <select class="form-select" formControlName="externo_interno">
+                <option hidden selected>Externo o Interno</option>
+                <option>Externo</option>
+                <option>Interno</option>
+              </select>
+              <div
+                class="text-danger"
+                *ngIf="
+                  prestamoForm.get('externo_interno')?.hasError('required') &&
+                  prestamoForm.get('externo_interno')?.touched
+                "
+              >
+                <span>Externo/Interno <strong>Es Obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label class="form-label float-start">Equipo :</label>
+              <select class="form-select" formControlName="equipo">
+                <option hidden selected>Equipo</option>
+                <option>Probeta</option>
+                <option>Matraz</option>
+              </select>
+              <div
+                class="text-danger"
+                *ngIf="
+                  prestamoForm.get('equipo')?.hasError('required') &&
+                  prestamoForm.get('equipo')?.touched
+                "
+              >
+                <span>Equipo <strong>Es Obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label class="form-label float-start"
+                >Documento Solicitante :</label
+              >
+              <select
+                class="form-select"
+                formControlName="documento_solicitante"
+              >
+                <option hidden selected>Documento Solicitante</option>
+                <option>105678945</option>
+                <option>3102458</option>
+              </select>
+              <div
+              class="text-danger"
+              *ngIf="
+                prestamoForm.get('documento_solicitante')?.hasError('required') &&
+                prestamoForm.get('documento_solicitante')?.touched
+              "
+            >
+              <span>Documento Solicitante <strong>Es Obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="form-group">
+              Devuelto:
+              <input
+                type="radio"
+                class="form-check-input"
+                name="check"
+                id="radioSi"
+                value="si"
+              />
+              <label class="form-check-label" for="radioSi"> Sí </label>
+              <input
+                type="radio"
+                class="form-check-input"
+                name="check"
+                id="radioNo"
+                value="no"
+              />
+              <label class="form-check-label" for="radioNo"> No </label>
+            </div>
+            <div class="mt-2">
+              <input
+                type="varchar"
+                class="form-control form-control-sm"
+                placeholder="Estado de Devolucion"
+              />
+            </div>
+            <div class="mt-2">
+              <input
+                class="form-control form-control-sm"
+                type="text"
+                name="FechaDevolucion"
+                placeholder="Fecha de devolucion"
+                onclick="ocultarError();"
+                onfocus="(this.type='datetime-local')"
+                onblur="(this.type='text')"
+              />
+            </div>
+            <div class="mt-2">
+              <button
+                routerLink="/loan/loan-list"
+                class="btn btn-dark btn-lg float-start"
+              >
+                Volver
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg float-end"
+                [disabled]="!prestamoForm.valid"
+              >
+                Aceptar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

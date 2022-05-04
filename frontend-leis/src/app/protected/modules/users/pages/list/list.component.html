@@ -5,9 +5,8 @@
   [globalFilterFields]="['name','users.name']">
   <ng-template pTemplate="caption">
     <div class="table-header">
-      Lista de Usuarios
+      LISTA DE USUARIOS
       <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
         <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
           placeholder="Busqueda Global" />
       </span>
@@ -63,14 +62,18 @@
                   <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
                 </ng-template>
               </p-dropdown>
-            </ng-template> -->
+            </ng-template>77 -->
           </p-columnFilter>
         </div>
       </th>
-
-
+      <th pSortableColumn="icon">
+        <div class="flex justify-content-between align-items-center">
+          Editar/Eliminar
+        </div>
+      </th>
     </tr>
   </ng-template>
+
 
   <ng-template pTemplate="body" let-users>
     <tr class="p-selectable-row">
@@ -100,8 +103,11 @@
 
         <span [class]="'status-' + users.status">{{users.status}}</span>
       </td>
+      <td>
+        <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button mr-2" (click)="editUser(user)"></button>
+        <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"  (click)="deleteUser(user)"></button>
+    </td>
     </tr>
   </ng-template>
 </p-table>
-
 </div>

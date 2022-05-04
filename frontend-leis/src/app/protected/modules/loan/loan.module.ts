@@ -6,8 +6,9 @@ import { ListComponent } from './pages/list/list.component';
 import { ListLoanEquipmentComponent } from './pages/list-loan-equipment/list-loan-equipment.component';
 import { PrimeNgModule } from 'src/app/prime-ng/prime-ng.module';
 import { EquipmentLoanComponent } from './pages/equipment-loan/equipment-loan.component';
-import { LoanRequestComponent } from './pages/loan-request/loan-request.component';
-import { ReturnLoanComponent } from './pages/return-loan/return-loan.component';
+import { CreateLoanComponent } from './pages/create-loan/create-loan.component';
+import { ListLoansComponent } from './pages/list-loans/list-loans.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,13 +16,16 @@ import { ReturnLoanComponent } from './pages/return-loan/return-loan.component';
         ListComponent,
         ListLoanEquipmentComponent,
         EquipmentLoanComponent,
-        LoanRequestComponent,
-        ReturnLoanComponent
+        CreateLoanComponent,
+        ListLoansComponent,
+        
+        
     ],
     imports: [
         CommonModule,
         LoanRoutingModule,
-        PrimeNgModule
+        PrimeNgModule,
+        ReactiveFormsModule
     ]
 })
 export class LoanModule { }

@@ -1,1 +1,30 @@
-<p>generate report works!</p>
+<mat-card style="border-radius: 1rem; width: 80%; margin-left: 150px; background-color: rgb(8, 22, 54); margin-top: 70px;">
+  <h1 style="color: aliceblue; text-align: center">Reportes</h1>
+
+<div class="report_info">
+  <br>
+     <label style="color: aliceblue;" >Para:</label>
+    <input style="border-radius: 10px; width: 35%;
+    height: 110%;" type="text" class="form-control" placeholder="ejemplo@usantoto.edu.co" />
+
+<br>
+  <div class="asunto">
+    <label style="color: aliceblue; ">Asunto:</label>
+    <input style="border-radius: 10px; width: 35% ;
+    height: 110%;" type="text" class="form-control" placeholder=" " />
+  </div>
+  <br />
+  <p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
+  <br/>
+
+  <div class="card">
+    <h4>Adjuntar archivos</h4>
+    <div class="section">
+      <p-fileUpload name="myfile[]" url="./upload.php" style="margin-left: 50px"></p-fileUpload>
+    </div>
+
+    <p-button style="text-align: center;" label="Enviar" icon="pi pi-send" iconPos="right"></p-button>
+  </div>
+</div>
+</mat-card>
+

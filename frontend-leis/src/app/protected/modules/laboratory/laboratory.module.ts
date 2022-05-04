@@ -2,16 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LaboratoryRoutingModule } from './laboratory-routing.module';
-import { ListComponent } from './pages/list/list.component';
 
+import { AdministrarComponent } from './pages/administrar/administrar.component';
+import { ListarComponent } from './pages/listar/listar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations: [
-        ListComponent
-    ],
-    imports: [
-        CommonModule,
-        LaboratoryRoutingModule
-    ]
+  declarations: [AdministrarComponent, ListarComponent],
+  imports: [CommonModule, LaboratoryRoutingModule, ReactiveFormsModule],
 })
-export class LaboratoryModule { }
+export class LaboratoryModule {}

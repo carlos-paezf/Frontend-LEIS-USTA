@@ -11,6 +11,7 @@ import {EditorModule} from 'primeng/editor';
 import {TreeSelectModule} from 'primeng/treeselect';
 import {ButtonModule} from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
+import { ToolbarModule } from 'primeng/toolbar';
 
 @NgModule({
     exports: [
@@ -25,7 +26,9 @@ import { ChartModule } from 'primeng/chart';
         EditorModule,
         TreeSelectModule,
         ButtonModule,
-        ChartModule
+        ChartModule,
+        ToolbarModule
+
     ]
 })
 

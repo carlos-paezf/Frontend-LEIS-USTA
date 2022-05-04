@@ -1,28 +1,37 @@
-<div class="equipment__admin2">
-  <div class="equipment__header">
+<div class="assign_admin">
+  <div class="assign_header">
+
     <div class="photo img">
+      <h1 class="asig">Asignación de Rol</h1>
       <img src="/assets/rol.png" alt="">
     </div>
-    <div class="equipment__info">
+    <div class="assign_info">
       <div class="title">
         <label for="" class="cod">Documento:</label>
-        <input type="text" class="form-control" placeholder="Documento">
+        <input type="text" class="form-control" placeholder=" ">
       </div>
       <div class="title">
         <label for="" class="cod">Nombres:</label>
-        <input type="text" class="form-control" placeholder="Nombres">
+        <input type="text" class="form-control" placeholder=" ">
       </div>
       <div class="title">
         <label for="" class="cod">Apellidos:</label>
-        <input type="text" class="form-control" placeholder="Apellidos">
+        <input type="text" class="form-control" placeholder=" ">
       </div>
       <div class="title">
         <label for="" class="cod">E-mail:</label>
-        <input type="text" class="form-control" placeholder="e-mail">
+        <input type="text" class="form-control" placeholder=" ">
       </div>
       <div class="title">
-        <label for="" class="roles">Rol:</label>
-        <p-treeSelect [(ngModel)]="selectedNode" [options]="nodes" placeholder="Seleccionar Rol"></p-treeSelect>
+        <label for="" class="cod">Rol:</label>
+        <div class="form-group">
+          <select class="form-select">
+            <option selected>Seleccione Rol</option>
+            <option value="1">Administrador</option>
+            <option value="2">Estudiante</option>
+            <option value="3">Laboratorista</option>
+          </select>
+        </div>
       </div>
     </div>
     <p-button class= "boton" label="Guardar" icon="pi pi-check" iconPos="right"></p-button>

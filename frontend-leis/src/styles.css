@@ -10,7 +10,7 @@
     --secondary: #D10024;
 
     --orange: rgb(209, 98, 18);
-    
+
     --text-light: #8895b5;
     --text-on-primary: #fff;
 
@@ -113,7 +113,7 @@ body::-webkit-scrollbar-track {
     transition: background 200ms;
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--primary); 
+    background: var(--primary);
 }
 body::-webkit-scrollbar-corner {
     background: none;
@@ -296,7 +296,7 @@ app-input-autocomplete {
     transition-property: color;
 }
 .search__input:focus {
-    outline: 2px solid var(--gold); 
+    outline: 2px solid var(--gold);
 }
 .sidenav.is-collapsed .search__input {
     color: transparent;
@@ -393,4 +393,8 @@ app-input-autocomplete {
 .btn__up-disable {
     opacity: 0;
     transition: all var(--duration) var(--timing);
+}
+
+.title{
+  font-size: 1.8 rem;
 }
