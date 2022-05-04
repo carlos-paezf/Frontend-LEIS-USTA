@@ -1,4 +1,4 @@
-<div class="individual-statistics">
+<!--<div class="individual-statistics">
     <app-title title="Estadísticas Individuales - Computador Acer Aspire 7"></app-title>
 
     <div class="statistics__container">
@@ -15,3 +15,75 @@
         </div>
     </div>
 </div>
+-->
+
+<div class="equipmentadmint">
+  <div class="equipmentheader" style="width: 80%;">
+
+    <div class="redcards">
+      <label type="text" style="border-radius: 15px; margin-top:5%;">Equpo prestamos</label>
+      <h4 style="justify-content: center; margin-top: 30%;">XXXX</h4>
+    </div>
+    <div class="redcards">
+      <label type="text"  style="border-radius: 25px; margin-top:5%; ">Equipos bodega</label>
+      <h4 style="justify-content: center; margin-top: 30%;">XXXX</h4>
+    </div>
+    <div class="redcards">
+      <label type="text" style="border-radius: 15px; margin-top:5%; ">Equipos en el
+        campus</label>
+        <h4 style="justify-content: center; margin-top: 30%;">XXXX</h4>
+    </div>
+    <div class="redcards">
+      <label type="text"style="border-radius: 15px; margin-top:5%; ">Equipos en
+        Giordano</label>
+        <h4 style="justify-content: center; margin-top: 30%;">XXXX</h4>
+    </div>
+
+  </div>
+  <div class="document">
+    <div class="equipmentpanel2" style=" padding: 1rem;">
+      <h4 style="margin-top: 12px;">Caracteristicas</h4>
+      <div class="card" style="margin-top: -30px;">
+        <h5 style="text-align: center;">Vertical</h5>
+        <p-chart type="bar" [data]="basicData" [options]="basicOptions" style="height: 100px;"></p-chart>
+    </div>
+    <h4 style="margin: 12px; text-align: center; ">Tiempo de vida vs Uso</h4>
+    <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+
+    </div>
+
+    <div class="equipmentpanel2" style="justify-content: flex-start; padding: 1rem;">
+      <h4 style="margin: 12px; ">Historial</h4>
+      <div class="card" style="margin-top: -30px;">
+        <h5 style="text-align: center;">Vertical</h5>
+      <p-chart type="pie" [data]="data" [options]="chartOptions"  [style]="{'width': '100%'}"></p-chart>
+    </div>
+  </div>
+    <div class="equipmentpanel2" style="justify-content: flex-start; padding: 1rem;">
+      <h4 style="margin: 12px; text-align: center; ">Tiempo de vida vs Uso</h4>
+
+
+      <div style="width: 100%;">
+        <!--<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>-->
+        <div style="display: flex; margin-top: 1rem;">
+          <h6 >Estado de los equipos</h6>
+          <h6 style="margin-left: auto;"> 40% </h6>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <!--<mat-progress-bar mode="determinate" value="10"></mat-progress-bar>-->
+        <div style="display: flex; margin-top: 1rem;">
+          <h6 >Estado de los equipos</h6>
+          <h6 style="margin-left: auto;"> 10% </h6>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <!--<mat-progress-bar mode="determinate" value="80"></mat-progress-bar>-->
+        <div style="display: flex; margin-top: 1rem;">
+          <h6 >Estado de los equipos</h6>
+          <h6 style="margin-left: auto;"> 80% </h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
