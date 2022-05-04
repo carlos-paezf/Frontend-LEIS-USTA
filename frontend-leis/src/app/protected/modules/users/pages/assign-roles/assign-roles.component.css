@@ -1,22 +1,5 @@
-.sticky__nav {
-  align-items: center;
-  background: linear-gradient(rgb(10, 30, 78), rgb(8, 22, 56));
-  border-bottom: 2px solid var(--gold);
-  display: flex;
-  flex-flow: row nowrap;
-  flex: 0 1 auto;
-  height: var(--sticky-height);
-  padding-inline: calc(var(--sticky-height) * 0.9);
-  position: fixed;
-  transition: all var(--duration);
-  width: 100vw;
-  z-index: 10;
-}
-.sticky__nav.sticky {
-  height: var(--sticky-height-mini);
-}
 .asig{
-  color: white;
+  color: #081636;
 
 }
 .auth__img {
@@ -24,18 +7,7 @@
   height: 100%;
   padding: 10px;
 }
-.auth__img img {
-  height: 100%;
-   color: white;
-}
 
-.auth__links {
-  align-items: center;
-  display: inline-flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  width: calc(100vw * 0.2);
-}
 mat-grid-tile {
   background: lightblue;
 }
@@ -47,29 +19,18 @@ mat-grid-tile {
   width: 100%;
   /* margin: 5rem; */
   align-items: center;
-  background-color: rgb(248, 248, 248);
-}
 
-.definition {
-  margin: 0;
-  min-width: 40%;
-  height: 80px;
-  background: lightblue;
-  overflow-y: auto;
-  text-align: center;
-  border: 2px solid orange;
-  border-radius: 1rem;
+  background-color: rgb(#081636);
 }
-
 .assign_header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
   width: 90%;
-  margin-top: 80px;
+  margin-top: var(--breadcrumb);
   padding: 35px;
-  background-color: rgb(8, 22, 54);
+  background-color: rgb(#DDDDDD);
   border-radius: 1rem;
 }
 
@@ -80,14 +41,14 @@ mat-grid-tile {
 }
 
 .photo img {
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #081636;
   border-radius: 1rem;
-  width: 60%;
-  height: 63%;
+  width: 55%;
+  height: 60%;
   margin-top: 50px;
   margin-left: 75px;
   /* object-fit: cover; */
-  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px #081636;
   transition: all 200ms ease-in-out;
 }
 
@@ -97,7 +58,6 @@ mat-grid-tile {
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
-  margin-top: 50px;
 }
 
 .title {
@@ -110,9 +70,8 @@ mat-grid-tile {
   margin-left: 12px;
   margin-bottom: 50px;
 }
-.boton{
-margin-right: 70px;
-
+.p-button{
+background-color: #081636;
 }
 .roles{
   align-items: center;

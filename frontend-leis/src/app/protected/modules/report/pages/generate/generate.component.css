@@ -1,0 +1,30 @@
+.report{
+width: 80%;
+margin-left: 150px;
+background-color: #DDDDDD;
+margin-top: var(--breadcrumb);
+color: #081636;
+}
+
+.dest{
+  display: flex;
+  justify-content: space-between;
+  color: #081636;
+}
+
+.input{
+  border-radius: 10px;
+   width: 35%;
+   height: 110%
+}
+.p-button{
+  align-items: center;
+  background-color: #081636;
+  border-bottom: #081636;
+}
+
+.button{
+  text-align: center;
+  margin-bottom: 30px;
+}
+

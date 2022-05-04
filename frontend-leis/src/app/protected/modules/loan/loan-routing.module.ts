@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateLoanComponent } from './pages/create-loan/create-loan.component';
 import { ListLoanEquipmentComponent } from './pages/list-loan-equipment/list-loan-equipment.component';
 import { ListLoansComponent } from './pages/list-loans/list-loans.component';
-import { ListComponent } from './pages/list/list.component';
+import { ListComponent } from './pages/list-users/list-users.component';
 
 /**
  * Rutas del componente de Préstamos
