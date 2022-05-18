@@ -11,7 +11,7 @@ export class GenerateComponent implements OnInit {
   uploadedFiles: any[] = [];
 
     constructor() {
-      this.text = '<div>Bienvenido!!</div><div>Escribe aqui!! <b>Reportes estudiantes</b> en mora..</div><div><br></div>';
+      this.text = '<div>Escribe aqui!! <b>Reportes estudiantes</b> en mora..</div><div><br></div>';
 
   }
   ngOnInit(): void {}
