@@ -97,7 +97,7 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
     id: 5,
     icon: 'pi pi-building',
     label: 'Laboratorios',
-    routerLink: '/laboratory',
+    routerLink: '/laboratory/Administrar',
     routes: [
       {
         id: 5.1,
@@ -129,7 +129,7 @@ export const ITEMS_SIDENAV: ItemsMenu[] = [
         id: 6.2,
         icon: 'pi pi-book',
         label: 'Documentación',
-        routerLink: '/tool-experiment',
+        routerLink: '/document',
       },
     ],
   },
