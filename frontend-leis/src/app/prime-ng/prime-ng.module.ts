@@ -12,6 +12,7 @@ import {TreeSelectModule} from 'primeng/treeselect';
 import {ButtonModule} from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { ToolbarModule } from 'primeng/toolbar';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 @NgModule({
     exports: [
@@ -27,7 +28,8 @@ import { ToolbarModule } from 'primeng/toolbar';
         TreeSelectModule,
         ButtonModule,
         ChartModule,
-        ToolbarModule
+        ToolbarModule,
+        InputTextareaModule
 
     ]
 })
