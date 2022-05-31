@@ -4,7 +4,7 @@ import { Equipment } from 'src/app/protected/interfaces/list-equipment';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styles: [],
+  styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
   /* This is a property that is assigned an array of Equipment objects. */

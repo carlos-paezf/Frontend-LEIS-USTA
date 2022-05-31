@@ -1,10 +1,10 @@
-.roles_list{
+.roles_list {
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
   margin-top: var(--breadcrumb);
   width: 100%;
 }
-.fas{
+.fas {
   margin-left: 15px;
 }

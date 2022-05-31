@@ -1,6 +1,7 @@
 <div class="equipment__admin" >
-  <mat-card style="border-radius: 1rem; width: 80%; margin-left: 50px; background-color: rgb(8, 22, 54); margin-top: 50px;">
-  <div class="equipment__header" >
+  <mat-card style="border-radius: 1rem; width: 80%; margin-left: 50px; background-color: #DDDDDD; margin-top: 50px;">
+  <h2 style="margin-top: 10px;">Administrar Equipos</h2>
+    <div class="equipment__header" >
     <div class="photo col-5">
       <img
         src="https://images.unsplash.com/photo-1601934025804-c631e2777f26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -30,19 +31,31 @@
     </div>
   </div>
 </mat-card>
-<mat-card style="border-radius: 1rem; width: 50%; background-color: rgb(8, 22, 54); margin-top: 10px;">
+<mat-card style="border-radius: 1rem; width: 50%; background-color: #DDDDDD; margin-top: 10px;">
   <div class="section" style="margin-left: 70px; margin-bottom: 10px;">
     <p-fileUpload name="myfile[]" url="./upload.php" style="margin-left: 50px;"></p-fileUpload>
   </div>
 </mat-card>
-  <div class="equipment__header">
-  <div >
-    <button pButton pRipple type="button" label="Success" class="p-button-success" style="width: 200px;"></button>
-  </div>
-  <div >
-    <button pButton pRipple type="button" label="Danger" class="p-button-danger" style="width: 200px;"></button>
-  </div>
+<br>
+<div class="button">
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Volver"
+    icon="pi pi-arrow-left"
+    class="p-button-rounded p-button-secondary"
+    routerLink="/equipment/list-equipment"
+  ></button>
 
-  </div>
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Guardar"
+    icon="pi pi-check"
+    class="p-button-rounded p-button-secondary"
+  ></button>
+</div>
 
 </div>
