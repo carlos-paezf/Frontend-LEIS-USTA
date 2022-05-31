@@ -1,3 +1,4 @@
+<div class="list_equipment">
 <p-table #dt [value]="equipments" dataKey="id"  [rowHover]="true" [rows]="10"
   [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" responsiveLayout="scroll"
   [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [filterDelay]="0"
@@ -7,7 +8,7 @@
      Listado Equipos
       <span class="p-input-icon-left">
        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
-          placeholder="Búsqueda Global " />
+          placeholder="Búsqueda Global" />
       </span>
     </div>
   </ng-template>
@@ -82,9 +83,10 @@
         {{equipments.serie}}
       </td>
       <td>
-        <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button mr-2"></button>
-        <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>
-    </td>
+        <i class="fas fa-edit text-primary"></i>
+        <i class="fas fa-trash text-danger"></i>
+      </td>
     </tr>
   </ng-template>
 </p-table>
+</div>

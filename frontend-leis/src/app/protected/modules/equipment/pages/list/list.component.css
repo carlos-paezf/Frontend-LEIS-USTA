@@ -1,0 +1,12 @@
+.list_equipment{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin-top: var(--breadcrumb);
+    width: 100%;
+  }
+
+  .fas{
+    margin-left: 15px;
+  }
+  
