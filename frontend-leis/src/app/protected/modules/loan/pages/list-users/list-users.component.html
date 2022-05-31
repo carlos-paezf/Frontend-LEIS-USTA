@@ -1,22 +1,27 @@
-<div class="roles_list">
+<div class="list_user">
   <p-table
     #dt
-    [value]="users"
+    [value]="loans"
     dataKey="id"
+    styleClass="p-datatable-customers"
     [rowHover]="true"
     [rows]="10"
     [showCurrentPageReport]="true"
     [rowsPerPageOptions]="[10, 25, 50]"
-    [loading]="loading"
     responsiveLayout="scroll"
     [paginator]="true"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     [filterDelay]="0"
-    [globalFilterFields]="['name', 'users.name']"
+    [globalFilterFields]="[
+      'name',
+      'country.name',
+      'representative.name',
+      'status'
+    ]"
   >
     <ng-template pTemplate="caption">
       <div class="table-header">
-        LISTA DE USUARIOS
+        Historial Prestamos Usuarios
         <span class="p-input-icon-left">
           <input
             pInputText
@@ -67,6 +72,18 @@
             ></p-columnFilter>
           </div>
         </th>
+        <th pSortableColumn="cargo">
+          <div class="flex justify-content-between align-items-center">
+            Cargo
+            <p-sortIcon field="cargo"></p-sortIcon>
+            <p-columnFilter
+              type="text"
+              field="cargo"
+              display="menu"
+              class="ml-auto"
+            ></p-columnFilter>
+          </div>
+        </th>
         <th pSortableColumn="email">
           <div class="flex justify-content-between align-items-center">
             E-mail
@@ -79,79 +96,64 @@
             ></p-columnFilter>
           </div>
         </th>
-        <th pSortableColumn="rol">
+        <th pSortableColumn="equipo-prestado">
           <div class="flex justify-content-between align-items-center">
-            Rol
-            <p-sortIcon field="rol"></p-sortIcon>
+            Eq.Prestado
+            <p-sortIcon field="equipo-prestado"></p-sortIcon>
             <p-columnFilter
               type="text"
-              field="rol"
+              field="equipo-prestado"
               display="menu"
               currency="USD"
               class="ml-auto"
             ></p-columnFilter>
           </div>
         </th>
-        <th pSortableColumn="status">
+        <th pSortableColumn="observaciones">
           <div class="flex justify-content-between align-items-center">
-            Estado
-            <p-sortIcon field="status"></p-sortIcon>
+            Observaciones
+            <p-sortIcon field="observaciones"></p-sortIcon>
             <p-columnFilter
-              field="status"
-              matchMode="equals"
+              inputmode="text"
+              field="observaciones"
               display="menu"
               class="ml-auto"
-            >
-              <!-- <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-              <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)" placeholder="Any">
-                <ng-template let-option pTemplate="item">
-                  <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
-                </ng-template>
-              </p-dropdown>
-            </ng-template>77 -->
-            </p-columnFilter>
-          </div>
-        </th>
-        <th pSortableColumn="icon">
-          <div class="flex justify-content-between align-items-center">
-            Editar/Eliminar
+            ></p-columnFilter>
           </div>
         </th>
       </tr>
     </ng-template>
 
-    <ng-template pTemplate="body" let-users>
+    <ng-template pTemplate="body" let-loans>
       <tr class="p-selectable-row">
         <td>
           <span class="p-column-title">Document</span>
-          <span class="id">{{ users.id }}</span>
+          <span class="id">{{ loans.id }}</span>
         </td>
         <td>
           <span class="p-column-title">Name</span>
-          {{ users.name }}
+          {{ loans.name }}
         </td>
         <td>
           <span class="p-column-title">LastName</span>
-          {{ users.lastName }}
+          {{ loans.lastName }}
+        </td>
+        <td>
+          <span class="p-column-title">Cargo</span>
+          {{ loans.cargo }}
         </td>
         <td>
           <span class="p-column-title">E-mail</span>
-          {{ users.email }}
+          {{ loans.email }}
         </td>
         <td>
-          <span class="p-column-title">Rol</span>
-          {{ users.rol }}
+          <span class="p-column-title">Eq-Prestado</span>
+          {{ loans.prestamos }}
         </td>
-
         <td>
-          <span class="p-column-title">Status</span>
-
-          <span [class]="'status-' + users.status">{{ users.status }}</span>
-        </td>
-
-        <td>
-          <i class="fas fa-edit text-primary"></i>
-          <i class="fas fa-trash text-danger"></i>
+          <textarea pInputTextarea></textarea>
+          <!-- <span class="p-column-title">Observaciones</span>
+        {{loans.observaciones}}-->
         </td>
       </tr>
     </ng-template>

@@ -317,5 +317,16 @@
       "amount": "12",
       "description": "xxxxxx"
     }
+  ],
+
+  "roles": [
+    {
+      "name": "Administrador",
+      "code": "1"
+    },
+    {
+      "name": "Estudiante",
+      "code": "2"
+    }
   ]
 }

@@ -6,9 +6,8 @@
     <div class="table-header">
      Listado Equipos
       <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
-        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
-          placeholder="       Búsqueda Global " />
+       <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          placeholder="Búsqueda Global " />
       </span>
     </div>
   </ng-template>
@@ -53,7 +52,7 @@
       </th>
       <th pSortableColumn="">
         <div class="flex justify-content-between align-items-center">
-          Icono
+          Editar/Eliminar
         </div>
       </th>
 
@@ -83,9 +82,9 @@
         {{equipments.serie}}
       </td>
       <td>
-        <span class="p-column-title">Icon</span>
-        {{equipments.icon}}
-      </td>
+        <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button mr-2"></button>
+        <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>
+    </td>
     </tr>
   </ng-template>
 </p-table>

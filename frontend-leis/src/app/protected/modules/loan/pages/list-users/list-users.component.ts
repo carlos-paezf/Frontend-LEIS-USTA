@@ -3,9 +3,8 @@ import { LoanService } from 'src/app/protected/services/loanUsers.service';
 import { Loan } from 'src/app/protected/interfaces/loan-users';
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html',
-  styles: [
-  ]
+  templateUrl: './list-users.component.html',
+  styleUrls: ['./list-users.component.css']
 })
 export class ListComponent implements OnInit {
 

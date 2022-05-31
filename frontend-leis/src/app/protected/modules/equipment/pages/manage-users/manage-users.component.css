@@ -99,7 +99,6 @@ mat-grid-tile {
   justify-content: space-evenly;
   align-items: center;
   width: 96%;
-  margin-top: 1.5rem;
   padding: 20px;
 }
 
@@ -115,7 +114,7 @@ mat-grid-tile {
   height: 100%;
   object-fit: cover;
   box-shadow: 5px 5px 5px rgb(8, 22, 54);
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;;
 }
 
 .photo img:hover {
@@ -202,15 +201,13 @@ mat-grid-tile {
 }
 
 .section{
-  width: 60%;
+  width: 80%;
   height: 200px;
   /* border: 1px solid red; */
   /* display: flex; */
-  justify-content: center;
-  margin-top: 10px;
+  justify-content: space-around;
   justify-content: center;
   padding: 5px;
   border-radius: 40px;
-  margin-left: 300px;
 
 }

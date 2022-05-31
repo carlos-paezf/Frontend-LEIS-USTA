@@ -24,8 +24,6 @@ export class AdministrarComponent implements OnInit {
     console.log('Form ->', this.AdministrarForm.value);
 
     console.log(this.AdministrarForm.get('nomLab')?.value);
-
-
   }
 
   initForm(): FormGroup {
@@ -44,5 +42,4 @@ export class AdministrarComponent implements OnInit {
       ],
     });
   }
-
 }
