@@ -24,7 +24,7 @@
       "lastName": "Garcia ",
       "email": "jairo@usantoto.edu.co",
       "rol": "Laboratorista",
-      "status":"En mora",
+      "status": "En mora",
       "loans": "Prestamos"
     },
     {
@@ -265,39 +265,57 @@
   "equips": [
     {
       "item": 1,
-  "nameEquipment": "Ordenador",
-  "inventory": "5",
-  "model": "Lenovo",
-  "serie": "X31f1"
+      "nameEquipment": "Ordenador",
+      "inventory": "5",
+      "model": "Lenovo",
+      "serie": "X31f1"
     },
     {
       "item": 2,
-  "nameEquipment": "Ordenador",
-  "inventory": "5",
-  "model": "Lenovo",
-  "serie": "X31f1"
+      "nameEquipment": "Ordenador",
+      "inventory": "5",
+      "model": "Lenovo",
+      "serie": "X31f1"
     },
     {
       "item": 3,
-  "nameEquipment": "Ordenador",
-  "inventory": "5",
-  "model": "Lenovo",
-  "serie": "X31f1"
+      "nameEquipment": "Ordenador",
+      "inventory": "5",
+      "model": "Lenovo",
+      "serie": "X31f1"
     },
     {
       "item": 4,
-  "nameEquipment": "Ordenador",
-  "inventory": "5",
-  "model": "Lenovo",
-  "serie": "X31f1"
+      "nameEquipment": "Ordenador",
+      "inventory": "5",
+      "model": "Lenovo",
+      "serie": "X31f1"
     },
     {
       "item": 5,
-  "nameEquipment": "Ordenador",
-  "inventory": "5",
-  "model": "Lenovo",
-  "serie": "X31f1",
-  "icon": "bi bi-trash3"
+      "nameEquipment": "Ordenador",
+      "inventory": "5",
+      "model": "Lenovo",
+      "serie": "X31f1",
+      "icon": "bi bi-trash3"
+    }
+  ],
+  "labs": [
+    {
+      "id": 1,
+      "namLab": "Lab_Civil",
+      "location": "Edificio Giordano Bruno",
+      "capacity": "10",
+      "amount": "12",
+      "description": "xxxxxx"
+    },
+    {
+      "id": 2,
+      "namLab": "Lab_Civil",
+      "location": "Edificio Santo Domingo De Guzman",
+      "capacity": "10",
+      "amount": "12",
+      "description": "xxxxxx"
     }
   ]
 }

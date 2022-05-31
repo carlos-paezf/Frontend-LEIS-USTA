@@ -2,8 +2,7 @@
   <div class="starter-template">
     <div class="row">
       <div class="col-md-12 mt-5">
-
-        <h1>Creacion Laboratorio</h1>
+        <h1>Creación Laboratorio</h1>
         <br />
         <form [formGroup]="AdministrarForm" (ngSubmit)="onSubmit()">
           <!-- Nombre laboratorio -->
@@ -81,7 +80,7 @@
           </div>
 
           <br />
-           <!-- Capacidad de equipos -->
+          <!-- Capacidad de equipos -->
           <div class="mb-2 row">
             <label class="col-sm-2 text-dark">Capacidad de equipos</label>
             <div class="col-sm-8">
@@ -136,13 +135,13 @@
 
           <!--Guardar -->
 
-
-          <button type="submit" [disabled]="!AdministrarForm.valid" class="btn btn-primary btn-lg btn-block" >
+          <button
+            type="submit"
+            [disabled]="!AdministrarForm.valid"
+            class="btn btn-primary btn-lg btn-block"
+          >
             Guardar
           </button>
-
-
-
         </form>
       </div>
     </div>

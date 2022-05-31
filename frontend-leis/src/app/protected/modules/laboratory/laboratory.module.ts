@@ -1,3 +1,4 @@
+import { TableModule } from 'primeng/table';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +10,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdministrarComponent, ListarComponent],
-  imports: [CommonModule, LaboratoryRoutingModule, ReactiveFormsModule],
+  imports: [CommonModule, LaboratoryRoutingModule, ReactiveFormsModule, TableModule ],
 })
 export class LaboratoryModule {}
