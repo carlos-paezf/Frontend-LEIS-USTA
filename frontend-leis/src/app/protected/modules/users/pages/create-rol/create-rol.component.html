@@ -1,1 +1,36 @@
-<p>create-rol works!</p>
+<div class="create">
+  <h1>Creación de roles</h1>
+  <br />
+  <div class="dest">
+    <label>Permisos:</label>
+    <input
+      style="border-radius: 10px; width: 40%"
+      type="text"
+      class="form-control"
+      placeholder="ejemplo@usantoto.edu.co"
+    />
+
+    <br />
+    <label>Permisos:</label>
+    <input
+      style="border-radius: 10px; width: 40%"
+      type="text"
+      class="form-control"
+      placeholder="ejemplo@usantoto.edu.co"
+    />
+  </div>
+  <br />
+  <h5>Grouped</h5>
+  <p-multiSelect [options]="roles" [group]="true" [(ngModel)]="selectedRoles" defaultLabel="Select a City" scrollHeight="250px" display="chip">
+      <ng-template let-group pTemplate="group">
+          <div class="flex align-items-center">
+              <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'mr-2 flag flag-' + group.value" style="width: 20px"/>
+              <span>{{group.label}}</span>
+          </div>
+      </ng-template>
+  </p-multiSelect>
+  <br />
+  <div class="button">
+    <button pButton pRipple type="button" label="Guardar" icon="pi pi-check" class="p-button-rounded p-button-secondary" ></button>
+  </div>
+</div>

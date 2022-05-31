@@ -143,14 +143,18 @@
                 <option>3102458</option>
               </select>
               <div
-              class="text-danger"
-              *ngIf="
-                prestamoForm.get('documento_solicitante')?.hasError('required') &&
-                prestamoForm.get('documento_solicitante')?.touched
-              "
-            >
-              <span>Documento Solicitante <strong>Es Obligatorio</strong></span>
-            </div>
+                class="text-danger"
+                *ngIf="
+                  prestamoForm
+                    .get('documento_solicitante')
+                    ?.hasError('required') &&
+                  prestamoForm.get('documento_solicitante')?.touched
+                "
+              >
+                <span
+                  >Documento Solicitante <strong>Es Obligatorio</strong></span
+                >
+              </div>
             </div>
             <div class="form-group">
               Devuelto:
@@ -189,20 +193,26 @@
                 onblur="(this.type='text')"
               />
             </div>
-            <div class="mt-2">
+            <br />
+            <div class="button">
               <button
+                pButton
+                pRipple
+                type="button"
+                label="Volver"
+                icon="pi pi-arrow-left"
+                class="p-button-rounded p-button-secondary"
                 routerLink="/loan/loan-list"
-                class="btn btn-dark btn-lg float-start"
-              >
-                Volver
-              </button>
+              ></button>
+
               <button
-                type="submit"
-                class="btn btn-primary btn-lg float-end"
-                [disabled]="!prestamoForm.valid"
-              >
-                Aceptar
-              </button>
+                pButton
+                pRipple
+                type="button"
+                label="Aceptar"
+                icon="pi pi-check"
+                class="p-button-rounded p-button-secondary"
+              ></button>
             </div>
           </form>
         </div>

@@ -299,5 +299,15 @@
   "serie": "X31f1",
   "icon": "bi bi-trash3"
     }
-  ]
+  ],
+
+  "roles": [
+    {
+      "name": "Administrador",
+      "code": "1"
+    },
+    {
+      "name": "Estudiante",
+      "code": "2"
+    } ]
 }

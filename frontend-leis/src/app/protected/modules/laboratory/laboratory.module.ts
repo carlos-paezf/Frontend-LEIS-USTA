@@ -6,9 +6,10 @@ import { LaboratoryRoutingModule } from './laboratory-routing.module';
 import { AdministrarComponent } from './pages/administrar/administrar.component';
 import { ListarComponent } from './pages/listar/listar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PrimeNgModule } from 'src/app/prime-ng/prime-ng.module';
 
 @NgModule({
   declarations: [AdministrarComponent, ListarComponent],
-  imports: [CommonModule, LaboratoryRoutingModule, ReactiveFormsModule],
+  imports: [CommonModule, LaboratoryRoutingModule, ReactiveFormsModule,PrimeNgModule],
 })
 export class LaboratoryModule {}
